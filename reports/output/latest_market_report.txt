@@ -1,0 +1,146 @@
+AI MULTI-AGENT FINANCIAL RESEARCH PLATFORM
+==============================================================================
+Generated: 2026-09-08 14:37:37
+
+EXECUTIVE SUMMARY
+------------------------------------------------------------------------------
+FINAL DECISION      : HOLD
+MARKET REGIME       : MIXED
+MARKET SCORE        : 0.51
+AVERAGE CONFIDENCE  : 0.82
+
+MARKET INTERPRETATION
+------------------------------------------------------------------------------
+The multi-agent system indicates a balanced market environment. Bullish and bearish forces remain insufficient for a strong directional decision.
+
+CONSENSUS
+------------------------------------------------------------------------------
+BULLISH             : 0.0%
+NEUTRAL             : 100.0%
+BEARISH             : 0.0%
+CONSENSUS STRENGTH  : 100.0%
+INTERPRETATION      : 100.0% of agents agree that current conditions are neutral.
+SIGNAL CONFLICT     : False
+RISK OVERRIDE       : False
+
+AGENT DISTRIBUTION
+------------------------------------------------------------------------------
+BULLISH AGENTS      : None
+NEUTRAL AGENTS      : macro, stock, crypto, onchain, derivatives, technical, news, geopolitical, risk
+BEARISH AGENTS      : None
+
+STRONGEST SIGNALS
+------------------------------------------------------------------------------
+STRONGEST POSITIVE  : CRYPTO | NEUTRAL | score=0.62
+STRONGEST NEGATIVE  : GEOPOLITICAL | NEUTRAL | score=0.40
+
+TOP POSITIVE SIGNALS
+------------------------------------------------------------------------------
+1. CRYPTO: Crypto market assessment based on 1-day and 7-day momentum, volume confirmation, BTC/ETH relative strength and broad market participation.
+2. DERIVATIVES: Crypto derivatives assessment based on BTC and ETH funding, funding trends, open interest changes and positioning risk.
+3. NEWS: Financial news sentiment assessment based on weighted bullish and bearish headlines, headline concentration, uncertainty and high-severity news events.
+4. TECHNICAL: Technical market assessment based on RSI, EMA structure, MACD, MACD histogram and short-term price momentum.
+
+TOP RISKS
+------------------------------------------------------------------------------
+1. MACRO: NASDAQ strength is developing alongside rising yields
+2. ONCHAIN: Short-term BTC hashrate weakness
+3. ONCHAIN: BTC transaction activity declined sharply
+4. STOCK: Small caps are significantly underperforming large caps
+5. TECHNICAL: MACD is below its signal line
+
+AGENT RESULTS
+------------------------------------------------------------------------------
+MACRO           | NEUTRAL  | score=0.47 | confidence=0.80
+STOCK           | NEUTRAL  | score=0.49 | confidence=0.85
+CRYPTO          | NEUTRAL  | score=0.62 | confidence=0.80
+ONCHAIN         | NEUTRAL  | score=0.47 | confidence=0.80
+DERIVATIVES     | NEUTRAL  | score=0.61 | confidence=0.80
+TECHNICAL       | NEUTRAL  | score=0.60 | confidence=0.80
+NEWS            | NEUTRAL  | score=0.61 | confidence=0.85
+GEOPOLITICAL    | NEUTRAL  | score=0.40 | confidence=0.85
+RISK            | NEUTRAL  | score=0.40 | confidence=0.80
+
+DETAILED AGENT ANALYSIS
+==============================================================================
+
+MACRO
+------------------------------------------------------------------------------
+Signal      : NEUTRAL
+Score       : 0.47
+Confidence  : 0.80
+Summary     : Macro market assessment based on US dollar strength, Treasury yields, S&P 500 and NASDAQ momentum across 1-day and 7-day horizons.
+Risks:
+  - NASDAQ strength is developing alongside rising yields
+
+STOCK
+------------------------------------------------------------------------------
+Signal      : NEUTRAL
+Score       : 0.49
+Confidence  : 0.85
+Summary     : US equity assessment based on broad market indexes, technology leadership, small-cap participation and relative strength across 1-day and 7-day horizons.
+Risks:
+  - Small caps are significantly underperforming large caps
+
+CRYPTO
+------------------------------------------------------------------------------
+Signal      : NEUTRAL
+Score       : 0.62
+Confidence  : 0.80
+Summary     : Crypto market assessment based on 1-day and 7-day momentum, volume confirmation, BTC/ETH relative strength and broad market participation.
+Risks       : None
+
+ONCHAIN
+------------------------------------------------------------------------------
+Signal      : NEUTRAL
+Score       : 0.47
+Confidence  : 0.80
+Summary     : Bitcoin on-chain assessment based on hashrate, BTC price momentum and network transaction activity across 1-day and 7-day trends.
+Risks:
+  - Short-term BTC hashrate weakness
+  - BTC transaction activity declined sharply
+
+DERIVATIVES
+------------------------------------------------------------------------------
+Signal      : NEUTRAL
+Score       : 0.61
+Confidence  : 0.80
+Summary     : Crypto derivatives assessment based on BTC and ETH funding, funding trends, open interest changes and positioning risk.
+Risks       : None
+
+TECHNICAL
+------------------------------------------------------------------------------
+Signal      : NEUTRAL
+Score       : 0.60
+Confidence  : 0.80
+Summary     : Technical market assessment based on RSI, EMA structure, MACD, MACD histogram and short-term price momentum.
+Risks:
+  - MACD is below its signal line
+
+NEWS
+------------------------------------------------------------------------------
+Signal      : NEUTRAL
+Score       : 0.61
+Confidence  : 0.85
+Summary     : Financial news sentiment assessment based on weighted bullish and bearish headlines, headline concentration, uncertainty and high-severity news events.
+Risks       : None
+
+GEOPOLITICAL
+------------------------------------------------------------------------------
+Signal      : NEUTRAL
+Score       : 0.40
+Confidence  : 0.85
+Summary     : Geopolitical assessment based on military escalation, de-escalation, sanctions, energy disruption and supply-chain risk headlines.
+Risks       : None
+
+RISK
+------------------------------------------------------------------------------
+Signal      : NEUTRAL
+Score       : 0.40
+Confidence  : 0.80
+Summary     : Portfolio risk assessment based on cross-asset volatility, correlation and drawdown.
+Risks       : None
+
+==============================================================================
+END OF REPORT
+==============================================================================

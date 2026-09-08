@@ -1,0 +1,984 @@
+{
+    "generated_at": "2026-09-08T14:37:37.645580",
+    "platform": "AI Multi-Agent Financial Research Platform",
+    "version": "1.0",
+    "report": {
+        "agents": [
+            {
+                "agent": "macro",
+                "signal": "neutral",
+                "score": 0.47,
+                "confidence": 0.8,
+                "summary": "Macro market assessment based on US dollar strength, Treasury yields, S&P 500 and NASDAQ momentum across 1-day and 7-day horizons.",
+                "risks": [
+                    "NASDAQ strength is developing alongside rising yields"
+                ],
+                "evidence": {
+                    "DXY": {
+                        "price": 98.929,
+                        "change_pct": -0.23,
+                        "change_7d_pct": -0.23
+                    },
+                    "US10Y": {
+                        "price": 4.79,
+                        "change_pct": 0.13,
+                        "change_7d_pct": 2.53
+                    },
+                    "SP500": {
+                        "price": 7718.6001,
+                        "change_pct": -0.38,
+                        "change_7d_pct": 0.56
+                    },
+                    "NASDAQ": {
+                        "price": 26506.9902,
+                        "change_pct": -0.29,
+                        "change_7d_pct": 1.44
+                    }
+                }
+            },
+            {
+                "agent": "stock",
+                "signal": "neutral",
+                "score": 0.49,
+                "confidence": 0.85,
+                "summary": "US equity assessment based on broad market indexes, technology leadership, small-cap participation and relative strength across 1-day and 7-day horizons.",
+                "risks": [
+                    "Small caps are significantly underperforming large caps"
+                ],
+                "evidence": {
+                    "SPY": {
+                        "price": 770.19,
+                        "change_pct": -0.39,
+                        "change_7d_pct": 0.54
+                    },
+                    "QQQ": {
+                        "price": 718.96,
+                        "change_pct": 0.18,
+                        "change_7d_pct": 1.07
+                    },
+                    "DIA": {
+                        "price": 534.08,
+                        "change_pct": -0.53,
+                        "change_7d_pct": -0.03
+                    },
+                    "IWM": {
+                        "price": 296.01,
+                        "change_pct": 0.28,
+                        "change_7d_pct": -0.98
+                    },
+                    "NVDA": {
+                        "price": 230.36,
+                        "change_pct": 0.84,
+                        "change_7d_pct": 9.87
+                    },
+                    "AAPL": {
+                        "price": 319.97,
+                        "change_pct": -2.51,
+                        "change_7d_pct": 2.08
+                    },
+                    "MSFT": {
+                        "price": 499.7,
+                        "change_pct": -2.04,
+                        "change_7d_pct": 0.67
+                    }
+                }
+            },
+            {
+                "agent": "crypto",
+                "signal": "neutral",
+                "score": 0.62,
+                "confidence": 0.8,
+                "summary": "Crypto market assessment based on 1-day and 7-day momentum, volume confirmation, BTC/ETH relative strength and broad market participation.",
+                "risks": [],
+                "evidence": {
+                    "BTC": {
+                        "price": 78382.76,
+                        "change_pct": -0.93,
+                        "change_7d_pct": 1.26,
+                        "latest_volume": 30255081472.0,
+                        "avg_volume_7d": 28021779796.71,
+                        "volume_ratio": 1.08
+                    },
+                    "ETH": {
+                        "price": 2472.94,
+                        "change_pct": -0.72,
+                        "change_7d_pct": 2.28,
+                        "latest_volume": 12278286336.0,
+                        "avg_volume_7d": 13703636683.0,
+                        "volume_ratio": 0.9
+                    },
+                    "SOL": {
+                        "price": 103.07,
+                        "change_pct": -0.77,
+                        "change_7d_pct": 3.08,
+                        "latest_volume": 2750626816.0,
+                        "avg_volume_7d": 3090117642.0,
+                        "volume_ratio": 0.89
+                    },
+                    "RELATIVE_STRENGTH": {
+                        "btc_vs_eth_7d": -1.02
+                    }
+                }
+            },
+            {
+                "agent": "onchain",
+                "signal": "neutral",
+                "score": 0.47,
+                "confidence": 0.8,
+                "summary": "Bitcoin on-chain assessment based on hashrate, BTC price momentum and network transaction activity across 1-day and 7-day trends.",
+                "risks": [
+                    "Short-term BTC hashrate weakness",
+                    "BTC transaction activity declined sharply"
+                ],
+                "evidence": {
+                    "hashrate_change_pct": -15.76,
+                    "hashrate_7d_change_pct": -0.83,
+                    "btc_price_change_pct": -1.55,
+                    "btc_price_7d_change_pct": 0.69,
+                    "transactions_change_pct": -21.76,
+                    "transactions_7d_change_pct": 11.42
+                }
+            },
+            {
+                "agent": "derivatives",
+                "signal": "neutral",
+                "score": 0.61,
+                "confidence": 0.8,
+                "summary": "Crypto derivatives assessment based on BTC and ETH funding, funding trends, open interest changes and positioning risk.",
+                "risks": [],
+                "evidence": {
+                    "BTCUSDT": {
+                        "symbol": "BTCUSDT",
+                        "mark_price": 78388.66,
+                        "funding_rate_pct": 0.01,
+                        "avg_funding_8_periods_pct": 0.0037,
+                        "funding_trend": "rising",
+                        "open_interest": 108970.31,
+                        "open_interest_notional": 8542036327.85,
+                        "oi_change_1h_pct": 0.17,
+                        "oi_change_24h_pct": 1.26
+                    },
+                    "ETHUSDT": {
+                        "symbol": "ETHUSDT",
+                        "mark_price": 2472.55,
+                        "funding_rate_pct": 0.0014,
+                        "avg_funding_8_periods_pct": 0.0038,
+                        "funding_trend": "falling",
+                        "open_interest": 2321141.43,
+                        "open_interest_notional": 5739134147.69,
+                        "oi_change_1h_pct": 0.11,
+                        "oi_change_24h_pct": 0.66
+                    },
+                    "summary": {
+                        "avg_funding_rate_pct": 0.0057,
+                        "avg_funding_8_periods_pct": 0.0037,
+                        "avg_oi_change_1h_pct": 0.14,
+                        "avg_oi_change_24h_pct": 0.96,
+                        "total_open_interest_notional": 14281170475.54
+                    }
+                }
+            },
+            {
+                "agent": "technical",
+                "signal": "neutral",
+                "score": 0.6,
+                "confidence": 0.8,
+                "summary": "Technical market assessment based on RSI, EMA structure, MACD, MACD histogram and short-term price momentum.",
+                "risks": [
+                    "MACD is below its signal line"
+                ],
+                "evidence": {
+                    "TICKER": "BTC-USD",
+                    "PRICE": 78382.76,
+                    "EMA20": 76890.89,
+                    "EMA50": 72275.93,
+                    "RSI": 59.88,
+                    "MACD": 2839.58,
+                    "MACD_SIGNAL": 3239.4,
+                    "MACD_HISTOGRAM": -399.82,
+                    "PRICE_CHANGE_1D_PCT": -0.93,
+                    "PRICE_CHANGE_7D_PCT": 1.26
+                }
+            },
+            {
+                "agent": "news",
+                "signal": "neutral",
+                "score": 0.61,
+                "confidence": 0.85,
+                "summary": "Financial news sentiment assessment based on weighted bullish and bearish headlines, headline concentration, uncertainty and high-severity news events.",
+                "risks": [],
+                "evidence": {
+                    "processed_headlines": 50,
+                    "bullish_headlines": 8,
+                    "bearish_headlines": 12,
+                    "mixed_headlines": 5,
+                    "bullish_score": 15.61,
+                    "bearish_score": 9.35,
+                    "sentiment_balance": 0.251,
+                    "extreme_negative_count": 1,
+                    "strong_positive_count": 4,
+                    "raw_news": [
+                        {
+                            "category": "crypto",
+                            "title": "Bitcoin (BTC) price slides to $78,800 as BNB and DeFi tokens buck the selloff: Crypto Markets Today - CoinDesk",
+                            "source": "CoinDesk",
+                            "published": "2026-09-08T10:33:17+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTk1QUWpJdWlGclNwM2JhRzVfOW1XSVdtUzZ6a0E5a3l4ZUhYa3lmYVFkV0JVZlZKUzJMTXFyZmU1R29VMVZtaWhqeHl3dzVIaG1DQ2g1R1RLbW1JS1NscmlJcWxDbjZwM1ZQMWJuanVpWjhRZXR3dEJFVXlIM3NRSEkxUThTaEpKR3NNX3JKRW02X3pCbVJ4dVpCd2RYVTdSX1owWVZ5N0M3cXlUVDZv?oc=5"
+                        },
+                        {
+                            "category": "crypto",
+                            "title": "Why Bitcoin, Ethereum and XRP uphold bullish outlook despite correction? - FXStreet",
+                            "source": "FXStreet",
+                            "published": "2026-09-08T10:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQNENqeTIyeVVIQW1HbHpCRl9JOGZFU0hfT0M1clhRU19sSWhnNXVsVHp2d2JsWDVkZmxCTkZhN0pjUXAzeWIyMndjMFhGMUl4NHFpZkJxcm5jSTN0bFJrVDFRRDNKR0F0VlhsT3I2cU1lT0lSRmlOcnp3bHRHcTloSE1kZk8yeUhremg5S0dnOHdxQXJ3ODh6WHhXZWdxdGN0NWxnUng4MUEwN0JVNlhjeG55dlluN2xsWEt4X1BCQldzcEt1Zm9xZ3BhMDVjTHJ5ZlZ1dUo2WWYyWWpJcDBOZHNONmF2UQ?oc=5"
+                        },
+                        {
+                            "category": "commodities",
+                            "title": "Commodity Corner: Oil extends gains as Middle East tensions raise supply disruption concerns; gold steady... - Moneycontrol.com",
+                            "source": "Moneycontrol.com",
+                            "published": "2026-09-08T02:24:53+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPZUNGWjV2UDZEWFZ4VThpNE82cWpGSUtrMmZWVzduSjVRblhxN3pNeFJOUHl5cHA4ZnRwT1dyY0ptX2pkd0pOMVRicUpFSDhpdWZyQ01PSHV2SFVTTFJoOHhaaXFwcy0yTGhqVVlXNk5wcXhEcE9temVUbm1CalpVT3FRdW44SmM3cHU4OFRpaWtUU0JhdFFLS1MyVTc1VXBxWVNKY1V4LUZqZFNOUlN2TW50UlRsbW5CZU9jYnRYOXpNYmtHbjNaNWlSSTBYQS1UcEhTeDQtNjZTQUZSYjFmTlRndUhHVnRVUzZ6cUtBSGVVU2V6bzFNME0yOXJXUjNtTUNxYnIyWXdoZWvSAZACQVVfeXFMTm1sX3dOcUM2VG9nQUpfZUczREVxTVJZcFYzakRrUk5KMEt1VEYwTHdncFcyTVg5ZTQ2dGNzUWltLTU1Vlh3ZG9faUE0cjBiRzZZNXRYaERRS2pCUEU0a08zQ1drdDNFV1JRbjJhYkh0YndJRmh4Tllmd3FHX1NvMGd6YmZBd0ZLNkduVzY5QW1icE1aaWtWRlllZndkb1ZqZGtNbGxSeHQ4UXNDaU1CanptM2tZUjF6ajV1bFo1cnNKNFpqQzF1Y2ZLLTQ5UUFiNk51MHFJcnRMcUtBU0VxaDdCVHRrTGJnRVhkS2piaDlfdXVsVHM5NzM2YmtsMTRLdGUtYnRuemhiMEItT3Bka2o?oc=5"
+                        },
+                        {
+                            "category": "crypto",
+                            "title": "Bitcoin, Ethereum, XRP Slide, but Dogecoin Gains: Analyst Says 'We're Not in a Bull Market' if BTC Doesn' - Benzinga",
+                            "source": "Benzinga",
+                            "published": "2026-09-08T02:15:38+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQbDhTQUwwQXlPMDVUWDFfZnk2SndwUDRQMWxxVk8zZExFczhvVHBiZEtzSmJVcVcyODdQUDJ3WXVvYmp0bkV2SXRVS0RMM09zTUFtUWdpV1g4V251QnBMaUYxc1FpY3VYd0owaE15eGN1QW84U3JjMzVNTE1FWXVDT1Rkclhsd0hzUVB1ZDlIX3I2cmJWYWY5SnE5eGsyTlliZ0ViZjlGbTFhcmFMYUxkVzI5djE2c3NTeldEMWJHLVNmckVrczNIYzRRVDVmYWc?oc=5"
+                        },
+                        {
+                            "category": "crypto",
+                            "title": "Bitcoin, Ethereum, XRP Slide, but Dogecoin Gains: Analyst Says 'We're Not in a Bull Market' if BTC Doesn't Quickly Bounce From This Level - TradingView",
+                            "source": "TradingView",
+                            "published": "2026-09-08T02:15:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE84NUNyY0FZY1JjWHhINzRHSkZPNWszYy1OUmZQMHIzZVNFai1RZTNXZFd4MlNyWGdmQUY4NEw3emxOYzRGeElJbHBWWWk2SU9rVWhuU2tla01DeUtNR1FCcWxwZHhGTmtD?oc=5"
+                        },
+                        {
+                            "category": "crypto",
+                            "title": "Bitcoin Is Stuck Under $82,000. What Does That Mean for XRP, Ethereum and Solana? - 24/7 Wall St.",
+                            "source": "24/7 Wall St.",
+                            "published": "2026-09-07T19:06:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQcEhORUhZUEd0VVgwV1MyZlZoUHUyeDdIek1sM2JqQklKcXMyWkxnSGhhU0xjTmM5dF9xS2s3VTR4UXhScnlENlltVVRFbktub2k5ekZsWkMxaUowcVQyZU1SMElZQTJiWUluQnBuTXNwOGIwN0ljVjhWZ2F4VmpUMXJjZ0ZTVldibmUzQlk3bG16TGNNRDRiSVpfWHplSEl3SGhQOTY5YjBzYkNOVVFIMjY3Y0JNa1A5MC1BdkdSc2t2OFQxNWE4dTF4VXdsTnAt?oc=5"
+                        },
+                        {
+                            "category": "crypto",
+                            "title": "Bitcoin Rally Faces a Warning as Ethereum Sends a Bearish Signal - CryptoRank",
+                            "source": "CryptoRank",
+                            "published": "2026-09-07T19:00:31+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNOW8wVk1rWFBBQVJhUnlWSC1mNFk5Slc5VmZNdXFUVUpGZFZmSzBjcFpoc0pJellFMGJuS3lyVjN2eWI4YTVlalU4a0duSnBhMWFDNV9QdG9EX2tVTmE0R2JGcGZONWNibWduVHFMV3o4TU9RMjJMQ0tOdVNLYjdXY24wY1pLbWZ5RUVfVG5XMVpfYzFUTWxlRVBDeWN0REgtV1BXSA?oc=5"
+                        },
+                        {
+                            "category": "crypto",
+                            "title": "Bitcoin and ethereum prices today, Monday, September 7, 2026: Crypto investors on rate watch - finance.yahoo.com",
+                            "source": "finance.yahoo.com",
+                            "published": "2026-09-07T14:02:42+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOUUJSR2lrNHNxVzNfVFg2cEZzNEI5emlGWGJYNjAzTnVwNmIzd2Q2dVBxd2hWM3plbmhmNENOcXZlLVdRdlRhTDlOb1l0STFDY0JsUzRZaEQ5UHVPbEw2U0kzUkxMcEI4eWw2bVBxUDN0d0hGaFF4dXBNT0ZTQUlXMVhOMW5MaUhTcFRuZUQ4dWhUQ0czVEdWNXRqRVRZZHIxNzBVUUVzNGs1SUlvRVhRdDg2WklKUWpyeEdRLUtoelhtQWx3d1lvZDNwUXZIT0ZWTUY5MWl6dDVtdGJEdkNuMU1DTnNQazV2dFp2M2tNSUNqNHpBU1I0?oc=5"
+                        },
+                        {
+                            "category": "markets",
+                            "title": "Need to trade stocks? U.S. markets reopen Tuesday, what to know - The Palm Beach Post",
+                            "source": "The Palm Beach Post",
+                            "published": "2026-09-07T10:04:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTUpRd0NSTXBUVk9TajNkMDE2ZjZXN0FHbUQwVWozUEhzYVJhOUNub3JFcWwydUI1cDNRd05tbF9nTGlZVGRnbkx5M3JnYzhJX09tcmtCZGpGWjA1RVBqZ2k0d1JqV1NIRUFoUnZwQ2tEMXFRcFM0OWFRblAwXzJWdjVNUUlIYzdxZ2xoUHNwZTdBUW05TUVrTnRsVUtkZw?oc=5"
+                        },
+                        {
+                            "category": "commodities",
+                            "title": "A 175-year commodity market rule is starting to break - AFR",
+                            "source": "AFR",
+                            "published": "2026-09-07T05:21:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOMi1HN294Y3dQYVpMTnA5NFhfLXlaM21qa1VJNHZHVGg4V2d2R2dfdjZJTHhDVUp0M0lmMUdVeWI2bWVLZFYyOVhIbWQ3U2x1SEo1R3pabU5uYlNwZ1pfU2trTXpHUE8zLWY1QVlXTFVmNWpsRzhrSi1tRWJEODBDdk1zMjYxNHQzaXpHWnVQbVF1YkhzdlBqSjliZlRlcGlVNmkzUEE2bG80VEljeGc?oc=5"
+                        },
+                        {
+                            "category": "commodities",
+                            "title": "A 175-Year Commodity Market Rule Is Starting to Break - Bloomberg.com",
+                            "source": "Bloomberg.com",
+                            "published": "2026-09-06T19:00:34+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSUdOUGE4YVNRc3VLX2N5Z2ZkaXJmZTlycS04ODZfMWNlZGNrRWRQM2xGYVU2V1VoRE4zQ2lHY3czbDRMWEJBQUFJYTk2WVV0NDI5V0xXSnRrMUxzQ0ktMjQ3SE1UUmJibE14cVVGTXlCd3BXSUgyVnN5TlgtRGNQX0Rtb09qNE5kbUhGSTlRUkN1LU9ER1RPTXkzVzdoYzF0SGlpSWNoZ2dhSF9JQXo1XzlnUnB3bEh0UEl5WFQzS01VUQ?oc=5"
+                        },
+                        {
+                            "category": "macro",
+                            "title": "Top White House Economist Points to 1.6% Inflation as Evidence the Fed Doesn't Need Higher Rates - 24/7 Wall St.",
+                            "source": "24/7 Wall St.",
+                            "published": "2026-09-06T13:27:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPTlNhaWl1MENGTDlmdXZjVkJza21HdDBxNGhqM28xY055Q0ZKNlo5VDE4VTJ5STNuYjVaODhWb1VEMWNjY2VCSHY4Wk1DeWlEckx6aXdRVElQMWR5dFBESDkwYUhvNElaOXRtMkdNamg3M2ZCamVXYkF1dlhGNEdpM2pvR2UxTTZnQ3hnMm5ieUxGdzV0UVBhNk1jakUzWk9sbldHa3lNLTl2azRJMzloOEZUMlkyOWpTZ0F6QVBQeTZ5U2w2RHQ1bTgxSEdNUUh5Ql9FQg?oc=5"
+                        },
+                        {
+                            "category": "macro",
+                            "title": "Trump turns up the heat on Warsh as Fed rate hike looms - CNBC",
+                            "source": "CNBC",
+                            "published": "2026-09-05T18:10:58+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5DYTJSa3ZaZFdjOVppNUhHcUgwZUkzNzNkQ2dQbkxfZTV2czZOREZKemRxUDhtSlgyLVQ1eEQyRlVxRWFZNXVQSVdFUTVfc0FqMzFBSXE4Qkl1VWtzdmdQWllkSkl5QjJqZXpSOEVYWUpEU3d1TFNQeVNqX07SAYIBQVVfeXFMTi1HQkxWWlgzN1hYVGt2elQwUUVzcWJIai1VclJVUkNwVDI0ME9ZRjBlSzBtT0xoMTFVMWJfUkdWT0VPZmdrc0RRLXVDd0hkeFBpMEhMNzZhSTZ2SUx1QkQ2RW5UTVk2a3VPVjgwWWdoX1Q3b0I5THlCMHdJWHJGMWFidw?oc=5"
+                        },
+                        {
+                            "category": "central_banks",
+                            "title": "Investors Await Inflation Data, ECB Cues And Oracle Numbers. Rate Trajectory in Focus. - International Business Times",
+                            "source": "International Business Times",
+                            "published": "2026-09-05T17:35:36+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPMndQWTNVRFNqbHF2STNIVWRMZ0NuWEZTTWZBRkM2TEtUTWFhUlVVZ2NiZDMtN1B6azVPNFZhNHE1dlB6dmJFQmVPdWVNRERWVHF1OVZrN2ZTT19fZE42RXZiZEFnczlIUGJRWldoeFRaSHY3WFRuYjVOaktMVDVZZ01uYXdVRXlVY1k3SUtxeTZjRzdQNklSMGpZZ1RKN1h3eEFQWWg4a3lnSF8yT0djVXFn?oc=5"
+                        },
+                        {
+                            "category": "crypto",
+                            "title": "Bitcoin, Ethereum Slide As Crypto Sell-Off Deepens - Moomoo",
+                            "source": "Moomoo",
+                            "published": "2026-09-05T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNeXBaYWtwTzc5N2swLTdWVUk5c0FVdkhOS2lpdklzX0pnTzcxLU5GUmdRblV2VFdQc050Y21ZdG1qYzJhTmU4X2F1X0JoUE1FOHAySThHS1luQWZoZlN1WUZOM2lCeV9LcS15WFZjMV84Z2I1SHl3LVMzaHRwaGxONFc1MlpzNG8tZnQ1NGYweUNOYlNhNVE?oc=5"
+                        },
+                        {
+                            "category": "central_banks",
+                            "title": "Lessons of history as ECB and Fed decide interest rate moves - OMFIF",
+                            "source": "OMFIF",
+                            "published": "2026-09-04T18:37:32+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbHYteGxVRXFaeDJSZktOdzlyVXN5VGd2RnF5YkR0R09JcC0wYzhzbndjdTE2RFdTd1VXNmhxSG9oT1FZQUV2T3BPRS01cXFCc1NNRkNQLUNTbEstX2hOTUk4aExvZFl3VFVadWRwZ3FrS0YydWplMTEzTTEyUmEyX3RJYTlDWWltYWNSclRPYnhhNVRMWEE?oc=5"
+                        },
+                        {
+                            "category": "macro",
+                            "title": "Trump Threatens to Halt Some Trade Unless the Fed Cuts Rates - nytimes.com",
+                            "source": "nytimes.com",
+                            "published": "2026-09-04T15:58:30+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPWEVicmpWNTBDUVpfTGN4dXhleDJyWklRWngwTlZycFgzTzFPSzBNakp6Z1FQakZBZzJhMklVbWZhVTUxcjNtcGxadzhRY1JSZ3ZGM2VIUG4yWlZTeDlHZUc1VEhJY05mRUxKMjdtWTJVSmlUUk1naHhna3FVU1NOb2ZhTjRDUDhza0lxUDZfQkszcE1G?oc=5"
+                        },
+                        {
+                            "category": "central_banks",
+                            "title": "Week Ahead for FX, Bonds: U.S. Inflation Data in Focus; ECB Expected to Raise Rates - WSJ",
+                            "source": "WSJ",
+                            "published": "2026-09-04T15:09:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPYUg3NndUYW1HNGpfSzJxNUVyU3A1ZzFVbXhGMjBhVndjbFpZaHM4c0N4NTdsczFkS19XUkFEbHAyazFvbXA4T1RmY2thTUpYZHdMTXZGLTk5d1NuNmJGeGhZWnp4RFdGXzNtakUzWVpBVXhxUDZxOGFPamVmZFRQUkJ4el9ETUgxbTByc25JRGVwcGo4RlhtMTZBeUJfMGFjeC0yb212QXNPZk9wZEU3T0hZU0NSSWM?oc=5"
+                        },
+                        {
+                            "category": "commodities",
+                            "title": "International oil prices surpass $90 as gold and silver strengthen in tandem: What is driving the commodities market? - Moomoo",
+                            "source": "Moomoo",
+                            "published": "2026-09-04T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVEdNQ3lLSWtjdklwNks0eWZqM3hMczBlVFNkYUpFVVFmMXFuZGZGLW1mbnpxQ1o0Rkg5Z2hsS0tKeFM3OUtUNC1JMkN5VFRaeUxjTkxyaG9iUlAxUHFDbmhRWk14OHVDREV4bkdxb0pjME5JZFFJN0Ewb28zTjJOUUFuQTBCR1RFaDktVHlxQ2JsNDg4RURXMWprVUxsMTFyRVBQUlF5Q2R2eGs?oc=5"
+                        },
+                        {
+                            "category": "macro",
+                            "title": "Fed governor Waller muddies outlook on possible rate hike later this month - PBS",
+                            "source": "PBS",
+                            "published": "2026-09-04T00:08:19+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNYkprM1h1WDVtVjB0dDlscGZNeUxuUkw3TWhYZFhDYkZyYl93UmJSM3NYcXdRN2tfQzRuS2V4WTBBb2VtVmE2VTlGcnU2Nk9KeUVfYjBIbkswX2pMUHNfSk5xT2FDVXBaaHllX2lUZEgyVjdzR1F3REJIN284SnF6WUtha0Vtb0NSVmNCSm1FTUFPYXJzYW9fcERTNHFYYXY4TGg4a1FhM0VmdFJoWnhlTdIBtgFBVV95cUxPY1VTZzBtaXdkUll5UEFzY0daeWtWUGM0U05nTk96SHNveVdEd3RtdG9fMjNuSjB4bHdSSmtTdmlJYUlVZmotQWs1Qk9sMFdwcDNhelJ5NElBM2tRaDFxU2d5LW9sVzQzMGhyd0t4a3ZrNS1kVElnaGNfR0xLYl9yU3FwOU1EenpWeUhZTHh6bDRYMVR2RjZIMnUxODBBNWJEcE5aQ0NsSklQU0xZdE9aZ1F6MXpWZw?oc=5"
+                        },
+                        {
+                            "category": "crypto",
+                            "title": "Crypto Market Today, Sept. 3: Bitcoin Reclaims $81,000 on Fed Rate Pause Signals - The Motley Fool",
+                            "source": "The Motley Fool",
+                            "published": "2026-09-03T21:08:32+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNOTRGMTQzY0xmZEVlQk1VNmZVdWJVZ2Q0QWF3M01pMVRpQ0RtRUJ6WUQzZFBjQXlncGdQMkRnWHV2eEVMMmdLU3NOVGFOYmdRWkY0dGpoSHc5TFpFOEQ2eE1BaG91ZlFTUnpGMzl3SV85ZnBvSGkxR0lrYjUwUXdENmtKb25sV2RBQllBeGRETER6dzlqWmtEbDRrWk9abVM0akVGZUFGR0JuVUlUd0ZyRVQxQ0doNEIzdDFFVTNRa2tNOWh4ZFRQMEFCX3J4eUpkd2NsWV9MZw?oc=5"
+                        },
+                        {
+                            "category": "markets",
+                            "title": "Stocks rise on Wall Street as bond yields ease some more, even while oil prices continue to climb - Audacy",
+                            "source": "Audacy",
+                            "published": "2026-09-03T04:45:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPWi1SdXFVcVVFaVZwVkJuLS1nSHhfOUtILW1mQ0V5ZDhfajA2bll4STJGbmV0Y1hEa09zUW01dVNnS25Dc2txSzhSbnJ5el8yM3J2OF92SkhZN1JjRlVoU3ZGZnBQdy1KUTJZOGRKZThFeHVoNE1GWDFmakJlVFNHaDZNalh0dUxsVkdGdmlJM3h6WnF6VjRzQWpKUGNXVTBBWHhRQmwwM2ZEbWR1LUhhTg?oc=5"
+                        },
+                        {
+                            "category": "markets",
+                            "title": "Bond yields fall, stocks rally as Fed's Waller comments curb rate hike bets - Reuters",
+                            "source": "Reuters",
+                            "published": "2026-09-03T02:06:57+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQZHUxMWV6alo1MWFYM191bnlDTlhjTlc0Y2t0UjE4TndrZW9PczcxTmg5a1M0ZWk5M2Fqb0RvVlNIQWFuNG1nb3BtbjhhM2NmbkhDVENZTF9qYU53UDBWR3ROTl9XSlFDVGNLUF9sN29rSlhZc0xfSGZKcWlFanB4b2R1bw?oc=5"
+                        },
+                        {
+                            "category": "macro",
+                            "title": "Will the US Fed Hike Interest Rates in September? - Morningstar",
+                            "source": "Morningstar",
+                            "published": "2026-09-02T08:30:20+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPRTNZMUd5VmhBMXRRT1lKeUVVNGc3NUZROFVNclJTM2RhR1p5MnBDdUFheXBnME56S3EyYkk0T0VOSnIzVjZXUTVGQ2VyWlFJQkdGd3VfNklOWHhDWWFveEJlSUs1Rk41aTJ3VW9qM0xINGtQLW1TR1dncmJtU0dUT2lIdXhrd1dOMVVrZFlaUQ?oc=5"
+                        },
+                        {
+                            "category": "commodities",
+                            "title": "Commodity Corner: Oil rises on supply disruption concerns; gold extends decline - TradingView",
+                            "source": "TradingView",
+                            "published": "2026-09-02T02:17:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQenJyaEF4eEtDRXFfU05kUWZUWTc2dUp0SklvUlZ3SGNvaUpZVzYwMk5HdkFNZFdrT1hodnZpbGloRHNzQ2E0dnlIUmFlQXotRDlPOXVudFR0VklEUVFpcTE2YndMajlzVWhuT0tDTUl0R2MzTi1qZDdLVGhoY1pzZ0pOSWVUdUE5RDFPV0JzVzl6MjdyY1NZcG9mZXQ2dFZKRE9ZV3JwVHFLeWxpX0UzQnJNU0E2U21LenhNVEhhY2RJQnlJYmkwZXJ2VW9IMXJrM2xnbVFVQQ?oc=5"
+                        },
+                        {
+                            "category": "crypto",
+                            "title": "The Best Crypto Swaps for the Bull Market - San Jose Inside",
+                            "source": "San Jose Inside",
+                            "published": "2026-08-31T20:43:10+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNRWlQREZtaEVMVnRpTklrRl9pNlhsc3UwVnN6RWFZc1RkNzZiQndGWk5LMEZFMm5GaVc1UVJDalBiUWtqSHJtVmRGSlVfekpiMmx6OS1yTVBSUEFuQ19mOVhtU3dzWnUwVV9QMXltNlJrVTFQT3ZzQTQyNUVVTk9FWQ?oc=5"
+                        },
+                        {
+                            "category": "macro",
+                            "title": "Why interest rate expectations are pointing north - marketplace.org",
+                            "source": "marketplace.org",
+                            "published": "2026-08-31T20:35:08+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSFRsQzd0QnVwMmFibXFQNkdSSlBhVWEtTVpGTWNrYnI0eWpfM2dSSS16cFE0eVhVZnUwbUU2TlVvOVc4bktmMjBYOGpJQUgxZkZVTTg0NmFoQUlmaXNVaFM3czlxc0ltUnV6YU9yR0dnN1Bmbjd3UHo1VHZaVVhRYXYxWjhhVzR4Wll6dFBxNWVqRmRha1Vnd3pIRQ?oc=5"
+                        },
+                        {
+                            "category": "macro",
+                            "title": "Fed's Kevin Warsh warns inflation is too high, sparking bets rate hikes are coming - NPR",
+                            "source": "NPR",
+                            "published": "2026-08-28T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZ29adFdRZFdqaTlNc3d2bGY0N29nNUtfd3ByZkIxc0dWRmJ0OHNuS0pJME42enEzd01od1ZhZ1lOQ3BDUGFEODhzcFpxanU4T0hLLWItenZMNHduOGhOTXNreFJjYWMtZ0VlMklzTmhpbjVBc1pHdFhXdVg5S1RObGM5MUlHbGRrMEE0eWp6cWliOUxQUzFwNHQ2WlEza3c?oc=5"
+                        },
+                        {
+                            "category": "macro",
+                            "title": "Fed Chair Warsh says inflation still too high, interest rates may need to be raised - Spectrum News",
+                            "source": "Spectrum News",
+                            "published": "2026-08-28T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxObjVzT29KLUJiWWtmQ2RfamMyblRET0lPWXNFVTJ4N1NMZ2pUMUhnM1o2SElsT3lSUHlxTDVvaDhIdmpnYXZuQVBOZUFyLUhrS2hJcFBxRUxlclV2a01ReXFkM2N3R1k3NHBHRllzOUY4c0VSVTNYMnNZaWJaRVpLRWhPM2pkblpGVHVIb25iOE84MzdRNm5MNUM4dVNTTEdaZjUzX2t3?oc=5"
+                        },
+                        {
+                            "category": "macro",
+                            "title": "Fed has 'work to do' if price rises don't ease for Americans, Warsh says - BBC",
+                            "source": "BBC",
+                            "published": "2026-08-28T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5OWnNkcmpDX2puSWhLUktFSWNzSjJlU0l4dEM4UjF1bDBUNlFPVXRRMkJGUFd0RlpEWXc5UndqUmFLeTl6V2loWE1MUXRIcDRZRG41akZjR1VsQQ?oc=5"
+                        },
+                        {
+                            "category": "commodities",
+                            "title": "Commodity Price Prediction Markets in 2026: Oil, Gold & More - SailGP",
+                            "source": "SailGP",
+                            "published": "2026-08-25T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9TMjI0OXlXVzdfVmlJamx3dzlPdGZiOXpVWGpzRHI0RlZHTV95RkN3U2pRTVB6a0FtOXQwSU1BeXgtQzRHbFNuYUlzczU2QnlseFhBQTJhYktvYUNIRnc?oc=5"
+                        },
+                        {
+                            "category": "markets",
+                            "title": "Should You Invest in Bonds Right Now? - nytimes.com",
+                            "source": "nytimes.com",
+                            "published": "2026-08-21T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZTg0cmRhUU1yRDduTk9XblM1QUJVS1RXYUV1RGhydkZnZ2ZyOEUzVzhvRW9EUXo0T0J2OWo3TEZVN1ZLdWg1OU92YWZ3WmxLYnpnS1dfdjJlMERkM3YyalNRd0hxcVE4QXhCUzJfQkxkN0NUY1lLMVlSVEFXTEZCMUVNRlFTX0xjS1hr?oc=5"
+                        },
+                        {
+                            "category": "markets",
+                            "title": "The bond market is signaling trouble ahead. This is why you should pay attention - NPR",
+                            "source": "NPR",
+                            "published": "2026-08-20T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYVU5NU1oMWNLU0YtVDgtUU41QjBOYjdISkZvSnlFU0dZVGdmZXJXT25DWXlXMHdGMVpIUldKZld0TXVzS1dyS2RibV9yTjdfWEFVZHpJaWxOdmxfOFBRS01BWVRucnBVeVEtaDBjWTN4Qm9ZR095M0t3cWdPTC1mMS00Y2FVN0VXOU9v?oc=5"
+                        },
+                        {
+                            "category": "macro",
+                            "title": "Assessing a Medium-Run Natural Rate of Interest - Federal Reserve Bank of San Francisco",
+                            "source": "Federal Reserve Bank of San Francisco",
+                            "published": "2026-08-17T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOT3RjT1EyVWRJUFdQcG9fTDRPcGdfR1ZhUHJIZmZULXB2NndIVGlJa2h0ZWp4RlhEa0E0a1dURFV1Ti0tdnlWaFZHWXJ5akxTazZNZk1Rdkl3c25zZUpQVks0SkRSb1NHU3h3VExzdmpBZmxHUnVEWHo5TTJxb2xxZTM2X0M3VjJucVhwNWQyM25oZUN4SVNmWlVaX0JOY0hOSUtGS0pLX3RuREZiVmpVVTE0Smh5UmdsNXJaZE15RDhjb3AtLWc?oc=5"
+                        },
+                        {
+                            "category": "central_banks",
+                            "title": "Interest rate dilemma for central banks as inflation rises but growth slows - The Guardian",
+                            "source": "The Guardian",
+                            "published": "2026-08-17T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZS1MeWowSjFWYXhRUjUzejA5N2JPWWVBU0Y2UEszUFNzVnM0b0xKZDZSbnlKTHNEYnZlUTRETDlUSnYzeWpVc3lhM19qN0Zzd2NwTmpIZjZlYUFUVkdicW01WF9rZjZ0eEVvTElYa2l4c0V1aHlxRG9uUkM4RElua2FURDRWTmVXcWVWeXZGTlZsVjF1OEEwRUVOVWtxU1Vuak1pa2VfWWJDMG9Mcm0zTGJjYWM3UHlEVHpCTzl0Vi1hZw?oc=5"
+                        },
+                        {
+                            "category": "markets",
+                            "title": "The bond market is signaling trouble ahead for stocks - CNBC",
+                            "source": "CNBC",
+                            "published": "2026-08-13T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxObVVTTVBITTlHYWxiOWlxYmZmcXlsc2tkSDFYVldkNHZObDJkSXVvRWRRZVJRT0xUTUZtMzlQZUFLUS1EdHc0anVFdmRMZGlqLVBUTjBRdXVScjRJdXBWdlhkLUtlTGo1WlctWjhDU195SmtpemVSMGNjbUFoVlU1ZnFaamw1Nk1Jdjk1YlpIRXo3Zmlm?oc=5"
+                        },
+                        {
+                            "category": "markets",
+                            "title": "Stocks rise and interest rates slide after inflation report - NBC News",
+                            "source": "NBC News",
+                            "published": "2026-08-13T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPNTFaSEQyZkFiaU1KTkNPU2FuTk40RmpObmYtUUVXdVU2a2JIZ3RJSThFZ2pNdkZCYU53SjlyU0ZTMUlKVEl4Qi1pV2QxUkotYngtZ3pDRmZ6djhTUWhOc1dvVXlWckxDNG5kOUdCNkgtQ1plb1hJMUxmOWNCMXNDbVUxMWQ?oc=5"
+                        },
+                        {
+                            "category": "geopolitics",
+                            "title": "Longer routes, smarter logistics: how the seafood trade is adapting in an era of geopolitical chaos - Global Seafood Alliance",
+                            "source": "Global Seafood Alliance",
+                            "published": "2026-08-11T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNWkJiQ21xUWZYWGxiZ3dRUjAtR1lmVnVQVk9zdXVqYzJnc2F0TEgxcEdkTGlOek1BblpKc0hEYm1CN2lFTm16TVVVZkxXSkNqUU81eDFEeFNfYjl3Y1RhM3VTb2VsZmhxSDI2NUVRN1RzRTRsZVZBcE1PX0tjZ0hLdmdsX1N3R1oxekhGZ2RJQ2xyWGxwMnlELVg2bFNzSk9ZV2ZfN2hmM29hYV8tb3ZNTUlGWVlndjBfVXRWU1hpbGlaVC1XMEEzUGZoT0d2RHZMTllr?oc=5"
+                        },
+                        {
+                            "category": "markets",
+                            "title": "Financial Markets, Oil Prices, and Supply-Side Risks - Federal Reserve Bank of San Francisco",
+                            "source": "Federal Reserve Bank of San Francisco",
+                            "published": "2026-08-10T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPNmFjYWNhVVJHZ2Y1dVZ5M3A1LTdZT01sSFVQTVJZcXpfcjNNajNyRjZXNXBpWTlST29nWFBhQ19Id05CQ3pGQXMybTBoRU9CeDFvZXNNN1dxeUVxR3dkM0wyYTZhS1ZMVTJsckdySFlzVXBQVHdGMjVWd3k4TG9idUdueERPVHRZUV95NzBKYTdfYnVVNThfTlRkeEZtNGtCY0dhc3FZMjZBQ0ZHYzRhbnBkZFNxb1JQYmczWHR3S21LYU8yeXhyNk1HRk0?oc=5"
+                        },
+                        {
+                            "category": "markets",
+                            "title": "A Tale of Two Markets: Stocks, Bonds Send Mixed Signals - American Enterprise Institute - AEI",
+                            "source": "American Enterprise Institute - AEI",
+                            "published": "2026-08-02T13:06:18+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOZE9wV2JyNl9ab3ZodEY5ZFpjYWlDUjBxemw4aE5pTUlKWV94eGhmekNZUFNiOEZQVnpqakdwa3pvSHM3enU5ZG9uOTF0SXptdENZRjdkamo0ejZjN3pPM3A3WnlFNmRydzVaRFh1ODRKUjhObmYzNGJLc1hHSWNwYVZTWUMxT09Gak1Nc2xB?oc=5"
+                        },
+                        {
+                            "category": "commodities",
+                            "title": "World Bank's Commodity Markets Outlook, April 2026 - hinrichfoundation.com",
+                            "source": "hinrichfoundation.com",
+                            "published": "2026-07-07T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxONU9GblY5M3hpeVVDbXRRektNLWotUFFjc1NlV0RORmVydTVNeUVLc21EamNPRXhCZ19MdkE1MEF3bUdhTXFsS0ZQcGJrQWQtSkFSUnpzemxFREFrT0NZSjN1bVhfZWE4WjNvbThlTTE1c3RoT2d2TXczUXYtcWVyQzV2eUxBdWVBY3I0R2pMTGs0MFUyRGRjMFRzUnQ0b2FYbEFGcm8ybE5HSnJXdmliaw?oc=5"
+                        },
+                        {
+                            "category": "central_banks",
+                            "title": "Federal Reserve Chair Warsh emphasizes political independence, signals focus on inflation - PBS",
+                            "source": "PBS",
+                            "published": "2026-07-01T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUEUyYlI2SWY1d1MxUkIxREhFUXowTXozSVZrNnUwU2VUMkFiSURGUW1zZno1Y0ZlQk1PcTFRU2x1Q3lRbXFMbEF2NklUZkp2Sk9zY1dfbTJNMExpX0RQSFRIN25IanN0TldhSFF2VV8yc3lzUkVGN1YtU1Mwb3k4TGF2RHUyRXFOVEZpM2hERFQ4aXI1Y2ZHNU5ELUVsX2Q1QVZCc2hTTkhnV0ZfOFUtWGxrWHhoNklENnJzajhhSGFVbEHSAcgBQVVfeXFMTmF4Q1RfUG5yN3hTdXhrTUJMT29yYlVlQWlnTEUybVVwQ2VzSHlNV0dmaXktWXdxTEQ5WFdoY3BaTHhzTW9Fc29xaVFKT0djZVRCdzBfYVBxTUgyRXV2UUV3UGJoNXN6ZVY4aWlYODA5ak5penZaUmhueWlBdi1ULXhwcjFpZHNsOVViT1ZEUkhiX3RkU19WSElreE9CVmNIaUc1REtUcDQ5MjFHTUZYT0t3LUExX2FfY1NWNUd5OHRtUVNWOUdJbXU?oc=5"
+                        },
+                        {
+                            "category": "commodities",
+                            "title": "Oil and Precious Metals Price Projections Adjusted Post Conflict but Volatility a Big Risk for Now - TD Securities",
+                            "source": "TD Securities",
+                            "published": "2026-06-16T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcmotQ3d4dXAzU3ItcHgtY294bXVjVkRMYzdDRHJ1ZWU2NW9YNnpnZGE5c0tnVzNTeVdRWTZwcTA3WjJwbW9SRTRGNVFZRGhPNTVCYTU5Y3kxR1VKamdCVkZWalhiTGoxU0NMUDZMYWhYdW1tQU54SndhUjJncDQ2NkpMMzRSbVNa?oc=5"
+                        },
+                        {
+                            "category": "central_banks",
+                            "title": "European Central Bank raises interest rates ahead of Federal Reserve meeting next week - thehill.com",
+                            "source": "thehill.com",
+                            "published": "2026-06-11T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQcURsMmRwRDY3UUc0ZHhjc0d2QnJqSWZWeDhMQmVMREE4WmhMNUtJbU0wQnBQZ0QtNDh2SW9jTWRXYldFc25KT0hZbWNfSl9vOGpsT3pTRE5ZZjB2VHZsZWJFb2tISjJ6dkk1Z2JJOTFWdnNVNjRUcjVCdktJdk5xQ9IBhgFBVV95cUxQNUNQdUtNUm1LMk95MlVjQjBObHBRamgyaFdqYXBXNjV1dmNvTmtTZGJNeG14UWJ3U3dRdDNrM1otNUkzWTlwRTF4b0gzSEF3REk4UEdORkRtOFJlMGhuS04yRmxBVnZiNFdnWUFYam1aa1pRU2lqYVI4MGJwUi1IdlFTeWxHdw?oc=5"
+                        },
+                        {
+                            "category": "central_banks",
+                            "title": "Europe Raises Interest Rates as War Stokes Inflation - nytimes.com",
+                            "source": "nytimes.com",
+                            "published": "2026-06-11T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdk9LTVkyQm43cFJaV2QyZk1JUlktWTBzd3RaemZmVU1ob21tX2w4cDhUd2tfNHZobVFkQmxlNDZUNlE1VDdMR0VqQlVvcDBnUkgtc2c0Q3FudHM5X2JlUlRtamxEZ05UaC1uMTY4YVJjSHVBUUdsamlyQ2M1WEdodVYxZ1ltMUxOY0Zka3hVQl9kVVZ1c3A2YUlXNA?oc=5"
+                        },
+                        {
+                            "category": "central_banks",
+                            "title": "Central banks for the world's major economies meet to set rates this month - marketplace.org",
+                            "source": "marketplace.org",
+                            "published": "2026-06-02T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQWnNBZURMdUJrZUtrdlRSeEVkUnhwLXAzOGhEbjdpWjlPQk5xRFhLZ3QxQnY3ZGZISE1tREt1ZEx5UWhjcS1yMjFCRk5ET2dVblc3ZDR4Zk1jRUZjWmpWTUxhXzVfV016Y3EwakxoTmlONENqYTlEam10N1ZEeWFFNUhwVEkzQ2N1d2FuQWV1cUVkaHYtZW1Xc1JPTzgwdVZTQkNQSw?oc=5"
+                        },
+                        {
+                            "category": "markets",
+                            "title": "Stock Markets Are Increasingly Vulnerable to Rising Bond Yields - Goldman Sachs",
+                            "source": "Goldman Sachs",
+                            "published": "2026-05-22T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZ3c5Y2JnSFVZTTQ5SVg5MUdLZGZIS0dqdmxtRER4bkRBcEZfMW1tNHZCODFwZjU4S1k5ZmRVOHNOemlmUHV4UnE3bzBhd2tISEpoSUlRNENmTUh4dkdtVlJvZWt3VXAyZm1nbWZhVDEwdlowY0lFaFVzZGY2X093N01FUFNZZERrNWdFQWN1cU1GVTloZVA5b0dvSUhHTWVjMUpTMERxckcwTzlFbjhn?oc=5"
+                        },
+                        {
+                            "category": "geopolitics",
+                            "title": "Trade wars, tariffs and supply chains: Is globalization splitting into two blocs? - Latest news from Azerbaijan",
+                            "source": "Latest news from Azerbaijan",
+                            "published": "2026-05-18T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWVlrMlZmamVTanh5bnZaUGwxc1E4THdIbDZJZ0U4ZlZkdWNOdmtoZGFsbkVMeG9QbDM5cXF2VThUUk5DQm9jaUc4NV84NDBmS0hkQl9rdnZmZkM2OWxWNC1reWstV2NQM1U0TlAzXy1BcEVHLUkyTjlsalBaSm8tNllNWWkydGhRMFFhNmRYaFc4ZGRTdXdaQW9YYUlPeG0y?oc=5"
+                        },
+                        {
+                            "category": "geopolitics",
+                            "title": "The U.S.-China Trade Relationship: What’s Behind the Competition? - Council on Foreign Relations",
+                            "source": "Council on Foreign Relations",
+                            "published": "2026-05-15T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE85R1Rxa096czZxUGpuWjB0T0RCeWtvNzUwM2kxcHRhVXp4MjBJUXVIbC1vU2EtRGZ6c2MxQnVNamVJUHhpZU4yMVBqRUZ3YUgxNGVRT0pRSWYteGpFeW1mRlBuazdselRXZDdpaVY1NW0xS2hzSlUtb1p1VWhwdw?oc=5"
+                        },
+                        {
+                            "category": "geopolitics",
+                            "title": "Political risk shifts from war zones to 'contested systems', Willis warns - Insurance Business",
+                            "source": "Insurance Business",
+                            "published": "2026-05-12T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOc0E4UDFoTlpCTDRwd1VtQk9SWGlHdDA1eElzeHNmT2F1anZ4TWJKWG0zZnhRZEx2Vlk2cEJQNWt0N09RQzB6SG9vd2hyRDhTNTF4bzB0YWdmOFFjUU9hWnpSVUNNSFcyaWx6TVFOVGxsNndsQWtyaG1uYUNtdC1iVWpQU1JfYU1ybGxkVmp1eEExNDNkcEYtcjVVZnhFbGJlamdrM25tMl82M3VKcktzb0FGS1ZmUmdlT2JwTmY5Vlc4OUJQNkNNRml0cDNxOGVyVDN2c0g5c1g?oc=5"
+                        }
+                    ]
+                }
+            },
+            {
+                "agent": "geopolitical",
+                "signal": "neutral",
+                "score": 0.4,
+                "confidence": 0.85,
+                "summary": "Geopolitical assessment based on military escalation, de-escalation, sanctions, energy disruption and supply-chain risk headlines.",
+                "risks": [],
+                "evidence": {
+                    "processed_headlines": 48,
+                    "escalation_headlines": 23,
+                    "deescalation_headlines": 6,
+                    "mixed_headlines": 2,
+                    "escalation_score": 36.6,
+                    "deescalation_score": 24.46,
+                    "energy_risk_score": 0.0,
+                    "geopolitical_balance": -0.199,
+                    "severe_event_count": 1,
+                    "energy_event_count": 0,
+                    "raw_news": [
+                        {
+                            "category": "global",
+                            "title": "Global shipping authorities warn of maritime trade breakdown amid geopolitical turmoil - CNBC",
+                            "published": "2026-09-08T07:28:41+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE04cTRwTEtrVUFYc0ZWZlVEWS1QeE02amRGNzh3MUdzU0c5dDhiMGx0OWpNUWZ3VUtsaWkyazljRFJ3b2JXZ1plbEZlNHJ6TmFUUDJFOWlzNzdoTGYzbjFTMDVaX0FhRUxzdUcxdU9qeGFnclRiTHJaZDlDbkZFREXSAYQBQVVfeXFMT0JvS2RJRG9WQ19QMTlTZkpFdlgza1FEeENfRmZQWi02MDhaSnJYemRCVlhBNHRSSDRnNG9SQUdFNGpUVENQcWlZYllqaThMX1FlYjNXaWI0ZjFKYmd6dWR4dWFuR1gxR0dZUW9OMDdXR3VVZlBzNFU0NnJWV29MVVU1dU51?oc=5"
+                        },
+                        {
+                            "category": "global",
+                            "title": "Stocks dented by inflation risk from rising oil, dicey geopolitics - Reuters",
+                            "published": "2026-09-07T01:06:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQa0pobHhGSWlxLVNZa2htLURrNldPaHUyOGVyQXVBeGtJOWJDUXpqMXFSTDBCaHNkeFI5Q0Y2NUdFNlJoWUZlVGQwR2pGZk5oc1R5TzFLbUdFMU1aY3NGTXVhOGFTeFZOenRpbUlNc0ZiTjQtMnNaRVUtTVNrWEpLeGprbw?oc=5"
+                        },
+                        {
+                            "category": "global",
+                            "title": "New Panama Canal Chief Must Navigate Drought and Geopolitics - WSJ",
+                            "published": "2026-09-08T10:55:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZV84dWNBSEpGUE42NXF1UU9ON0lMTHVMUWRfY1VSS0tmQnRkSFNRRi1wQzR6RG9BSnBIR2tFTDhqaTZJNzBtbDVRb1I2eko4THo1ekdzQ1hFb2N5cnlrTnpHWlJLWXh1ZGpwT3l4VkJhTmpOc24zZVpwcmllOWc5aE1HeHd5TzdzN1M1RGZ0QWlEU2R4alloQVBhcVN4VGJUVTZtWml3SjduZw?oc=5"
+                        },
+                        {
+                            "category": "global",
+                            "title": "European Central Banks Move Gold Out of U.S. as Geopolitical Risks Mount - The European Magazine",
+                            "published": "2026-09-07T11:23:17+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQQUFEcVJpeEtnQ0E1MTU4ekptYlR6aFNrRFdsVTNNbHczT2NmdDNaSlNVeElMeXlPaUZVUkJ1bXloUklnRUdzb2o0eU10UWU5eERQemRkVVY0akwwUWVZcF9hdTJuR1NMaEs0Vzd6QUJTOWtZSXBFRzkzdEVTRW1Jc0g0ODZLbzl2dDNNVjdWX3J3eVFRNTlIcVRMYVAyb1M2QXNaUkYzTzlfQnU0bzVCel93?oc=5"
+                        },
+                        {
+                            "category": "global",
+                            "title": "The new Arctic route is redrawing the economic and geopolitical map - EL PAÍS English",
+                            "published": "2026-09-06T04:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaGJsdm5BZVl4el9xQ0xRYnB5WmdOMGR6ZWRINnd1Yk1Sd0JLcUc0cU56WGRjTlNkNVVPZkJIRkVZRkM5Qk1CbHM5cC1INlpNMlRPNlc3VXBaSE1rNE50YWYtS0NNbDhlZ0w2TGRrUDNmcmtiOXlVR2ViNE9xSEpMNC1ibGtzMXluM0dWVHRWb05sZGZZeHBwdnFuLXZ0bXFaWFp3d09EdnczMUFWbmtmbTFDbmMxWlBLNG05bWw1eWgwZ9IB1gFBVV95cUxPdGxQbjZxVVpiZHp0dlJ1RlZrdEkwUDZyd3FxWmJQOG44RTBmbG5qa2FNZVlPVlRBTXI0ZG56QzhubFlQQ1g5U1NaVWN6MzIyaGJnZWJRQWNRcHdwX0JmUEkwa0h6SDRtWlRxTTJBVGE1N1pKdFBJUHdvSVB2d25DTmdfRF9fZFFBRTlENkJJaXFfdl8xRWptM01PZW1reUZseTlTal9YZ3dicTNvTDVIRTJLMXJJRDhMREtzcUJsRXRwc2xGX2s2ejM4cjJQSkx1OTdaSUt3?oc=5"
+                        },
+                        {
+                            "category": "global",
+                            "title": "America’s Commitment to Africa - Geopolitical Futures",
+                            "published": "2026-09-08T10:00:26+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5kYVJoNlNaSW9FdkhRSmp0MVNYUzdTX1Y0UkxJUmh3Qnkzelc0NnZpV1RZdHQyclU0UXZwNUN3a0ZYOThiRTR4Rk5rWUVkWlhZb2UyeFZyczlrMGpsaC0wcTdWZ2Jkbl9MOTI0djQzOA?oc=5"
+                        },
+                        {
+                            "category": "global",
+                            "title": "Tanker shipping at a crossroads as geopolitics shakes up oil industry - TradeWinds News",
+                            "published": "2026-09-07T15:51:31+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNMjRGYzU5NEoyX21VcmttTzhBVF81NE5SbEFUMHRvNGNqWmZfR2g0OGV5cXkyejBTQ3BHSG9qRjZwVmhEN3IzTnhoTUYyakZYSzBUTU1QSTh3WnAyNWxKNWlPSndzVTVMUGhCbjdzNHB6aUk2LXF3SmlhY2xOSVJVR3RWV0JQdHRXSmc5MTAtb2NoTFhoNFhxcTVQVS1SVkNoTGdTbTV5b0ppa1BBb3RKczRzRWdNZVB4dWdrVQ?oc=5"
+                        },
+                        {
+                            "category": "global",
+                            "title": "'The use of migration as a geopolitical weapon challenges democracies to combine a clear-eyed view of the world with humanitarian vigilance' - Le Monde.fr",
+                            "published": "2026-09-07T03:30:10+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMisAJBVV95cUxPeHdkbWV3eHlsdUtxM1p3eUtHTy1yUHhQN1Jla1E2c2lDemc0VXZfUzljczltV0k1eTgtcGZkNzNVelhQbm5mSkU3U19LYjZkU3R5MXdlQjlZQVJfeXBxTFZ4blROTy1sSVRiRldXNzdBekUxWnRfcmFlZVQ1OTh5c0l5ZUlGUXFTRy1aZDRNY29SWmlRVXFzU2tVT04zc3I5cDBwUVBCQjlxSHl2a0V2dVNLajVOdFhpaGVGSDE3amVmZUR1M05KaXFDSHdnYkw1NnB1eHlUaXNjMzBmM0dTd3p3LW5qZVlJQlg4ZXFxTFJncjBfZUxvQ2VnWVRxM3R5RkdPNGxnZWxOYzRzWFY1MkM2U09ZQ3ZTeF9uNDdQYWYzRTJiQlUxV0VJcGl3TzVi?oc=5"
+                        },
+                        {
+                            "category": "global",
+                            "title": "U.S. Stock Futures Mixed as Traders Track Rising Geopolitical Tensions - TipRanks",
+                            "published": "2026-09-07T22:43:45+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZWdrMGlYbFotZUg1dmNTSHhRQWYtMVRkay0tYmY1OUVPLTJGTmtZLUtQdlJoeUFXX1VkUzFwV3BvUHZlSktaTDNNTTREY2ZDTzNxWXRoamNtREt4MV9jdno1VEdPRFhJQ2JMdnljSVo5VnhKRWZtbW1MNWNZbFFHLXB0eEdScTBXMVpOZVpWZWNNMWZCbHBKa0U5enZ6Qkdm?oc=5"
+                        },
+                        {
+                            "category": "global",
+                            "title": "Ceuta’s border crisis is about geopolitics, not just migration - The Conversation",
+                            "published": "2026-08-17T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdGtrQ2F3RDVhXzhibnRuRWxfc0c1ZUtfeXEtQTBVT0dfaV9RN01vYURFck5TZUZwVzFYOHBDVHZqQy14c2FELXZPN2pPT2VjQ2F6UlZXblNBR25takNGWVU2aWp4aUNiQ0dZREEtcVNoMDh6VDk4YUNBTS1TQ0ZvWEVYTW45ek5HZlBpWWVieENpb200d2p2NHlqTQ?oc=5"
+                        },
+                        {
+                            "category": "war",
+                            "title": "US, Iran engaged in tanker war: Where is the months-long conflict headed? - Al Jazeera",
+                            "published": "2026-09-06T10:50:58+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYl9iXzAxY2Jyd3FvVE1aa1V3TmVHd19wcDNad1RSUG13VTFFZ1BINnpIWjBQa1lwRVdsZXBFa1NFeGZnbzZpQWN3Ul8zeEx2aGs0cFQwUVZIamljSEVBMDZUNmJQdWhlSDREZU5Xcmh5emh5dFNMZm1RTTloNkxoeG9VWjhual9jYXZyMkQ5NTBXZnZuemFJeGRYd1ZWQmFSN3JtTDJLV0lXTWw1MUtZ0gG0AUFVX3lxTE5scDhDRzVfdkhnVkpIMF9pbkYxNFphWVdKd19fZ0phU0Q4QkFsZFctaDk4SmxiVWVvMDhFM1R3R1l6T2dfWlJtaUJ6TVR1WUtXaUhjY05jc1NKaTVrVUlORlZBXzhVUDhZZ1Rabmpnb0ZiZ0UtZlFOeFdnUkVzTWpPdW84YUF6NkVneF9tMU0tUDVaaTQ1bmNweGI4UkZSVFZVX2hFbHZlVmltYTFDd0pteUc4YQ?oc=5"
+                        },
+                        {
+                            "category": "war",
+                            "title": "US and Iran trade retaliatory attacks on ships as conflict flares - BBC",
+                            "published": "2026-09-05T22:44:07+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9MR2lQUEVfWHpBVV9NQjVxS0x6WldUNHB1RzFWSzlDa0hYWm1wYVpxMEVhdkRiT1dCeGVlY2Y5d25uR3lQOEtxbW5CVG5VNDRhRmFvU2NLQlN5UQ?oc=5"
+                        },
+                        {
+                            "category": "war",
+                            "title": "Bogged down: On the U.S.-Iran conflict escalation - The Hindu",
+                            "published": "2026-09-06T18:55:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQb194Tkl3N01nTHdwRDhqcFNFMFhkckpuYWZiX0FCZ1JmUVpMRmRBSFdVa3d4dEFRc3ZEbVlhZlVJWUhKTzQzVTI3eThubG4tYVB6UmZFWWlKS0h1ZWtGT0RYdVQyNkFfSnlCM2JBal9CUDRCRGM2di1iR3pxaEo1RzVaQk9GQ0Y0R18xWVdwZkZrclVaU19WZXY4TDNDUXhlcVFPaWtPWTB2UTBkQ0HSAbQBQVVfeXFMT29McHpQMm5sSVdXOHhYOWhHajRoZUF6ZXRpVVVoUjkwV2dfQUI4MlkxeG1rMk5XaWpZNG1NWTctY2cxYm9YcWIwQTZKZDdrWV9VWklRUjlBYmFHdjlPNHpRRHJSbGhOMlRyZlgzem83Rm5mT2VSUWl0WDQ2MDdLZlc0dWgwdF9Fb0lLX3ZxTmtkZ1dpMGxoeks0TW1zWmdJQTIzbXF4SWdLbVp0VFNFem1ncmxB?oc=5"
+                        },
+                        {
+                            "category": "war",
+                            "title": "Pentagon refused payout for soldiers who died in Iran conflict ‘because it isn’t a war’ - The Telegraph",
+                            "published": "2026-09-06T13:52:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOeW5BVDhpSVIyT2xEZXRSdVZIZEdJUGRFdzdJMS1XZkZRTGxBNDljUEhrQWtYUjcwRDZCeTVfSzZDSUNvSXhHVFM4dGEzN0ZwczI0dmNPWmN3czcwdEQ3M1hQdjV2YWJrU1loYWJuckxWYjdVSGVhOXhpQU95ejhpeEY2VFloaE1QRWFPNEllM1hLR196YUFiSjFsTjJwRW5yVUE?oc=5"
+                        },
+                        {
+                            "category": "war",
+                            "title": "Chris Wright says US is in a ‘conflict’ with Iran - Politico",
+                            "published": "2026-09-06T15:06:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE94aXRjQklrU0JhMEdfQ192cWVJX3Zma3Fodi12X2dTMDgxWG16OW9INk5hVHZiZzBiYWRfQmdoZ0dObTdDZjBMWGx2X3hweEJ1RGFHVGh1T2pJYU1pVmdBNjdJMjZNV1ZYck44cXR5OExnRWhnTXY2ZXlFcw?oc=5"
+                        },
+                        {
+                            "category": "war",
+                            "title": "Space wars are no longer science fiction: How nations are preparing for conflict in orbit - The Times of India",
+                            "published": "2026-09-07T13:08:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPSFp3TEtTY3RSd3hsQjd0c0dZZ2dKWGY4ZVc1anV3OVNpUHNUcl9jRl9GMmJ1S1RaOUFla3k2ZDU4S21QSjNZZ1I3LXBhczdVSlN0Vl95Ykx0dDQ5SlZkNXFERmhXVXprc0RGN0ZmeUUwRE85UVlhTmFYVjhmU0syejkwVDRZUmNhSXdVaUJ5TDRYbVVMTVN4X04xU1ExTDVBTGlyYzJjWnR3UlJDTXFGbkthT2l5T2dKaFFsMWxvRjhrQXpocW1pYTlLUnkwZDVZZGZVWUY2WkNrb2N2V3JfZlZIU3dIc0hfN2l6LXE1ZnhORXlPRXRNVEFPMFdZLTRhSEHSAYcCQVVfeXFMT3RWRVdZUWJtTHdMU0NtY3NJZUMtNWRicWpJMzFabmZoV1Bfa1R0VHpGcHR6UUZOSm9WUHNOVkNJd0IxQ1lCbUc1MXdOS055bTJ0Q2NUVFJfYVozWTJYeXFfNEhlUjVJeHBLcmY4cVo4bF93TXROSE9fMmFfdzZWanhUWVR0TmNHbjl5R2xiU0t5TnlkUDJ3amEtNGk1Y09uaWdmQW1CMXlGRGZsdWM3WXhyV0R6elhzUzR3Y2VZeGtUQnNTWGUyR01qaGQzMkMzaDFfX3VJVTkyeTBxTTdLTXNzc1JtaWR0UTFVZ05LS0NtODNULVVLQk52U1dUd29Sd240MjVUYm8?oc=5"
+                        },
+                        {
+                            "category": "war",
+                            "title": "China's Nostradamus 2027 predictions: Civil war in US ,10-year conflict in Iran and a draft - WION",
+                            "published": "2026-09-08T09:37:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZW5NQkliTUtSdThjdnFvMlN6NzJjSzY5TGF6MldLX3ZzLTRheVZ2ZXd2S0VZS2NNZmxzTGFxME05OXpRaWctcVN6Y3c2Z3NlNkk5V1YtR2FFakFlZnJ2YTlUVnVfbEc2YlhWZHp0ZDZNYWxIcFpLMlR1TGN5OTIzSXVUbkJfbGN6NTg4Ym1wdW1jbGlMY0FXOWdycnlXN3hSU0RVTlE5Vkc0ZEZ2WWZOcEVyNGQ4RzlWSmJEc3ZJcXpHRENC?oc=5"
+                        },
+                        {
+                            "category": "war",
+                            "title": "Trump calls Iran conflict ‘small potatoes’ - newsnationnow.com",
+                            "published": "2026-09-05T12:33:21+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOdGg4dGoyQzMtUGFCNU1fQ3BnLWFqTmtOVDZyWWx6MnRwMk9EWTJRcXZ2TUdVeHpOeXJtWE9LaElFOFVvTzlUV0FGbjV3RkNsbUpBMU55U2N5OWhHU3R3eEtNTExETjR1T1RaMU1WM21rVjB2emd6Y1NacW9PRVZzazByaHVjQkdWVDBIYlAxalhaS0xUYzFuNFpDcmxBVUxEQ3FDeS1wRTI5NmxhendaYW1Sc3ZoZ2tpR2xWMU12R3FvN1o4VFlRWHRyc2zSAdIBQVVfeXFMTTdjLUlUb2hQcXNQMFFqYXhOeFBNU0RVOEJfSDE0WG85LUp1MS1vaWcxSFZjNFl5alpTbElpLTFqTC0weGZxaFpsejh4X19lSGstWktDeWZNMkc1a2loVEI4SE5XSWgzc2c2d09tYUpkVW9BdUtpZENGd3hicHZkcVpXZTh1dHZVLWN0MXNkYjNjU1hMMTZrMlRKV0FTZC0wWmUybUFMTmRjaTg5WkxteDA2LVlrSDgzTmhXbVJUb21lLTFFbkJHYmo1YWNBQk5sQU93?oc=5"
+                        },
+                        {
+                            "category": "war",
+                            "title": "Houthis launch one of largest attacks in conflict with Saudi Arabia - Daily Sabah",
+                            "published": "2026-09-08T08:04:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQSjAwTkpEeFVZSWVaQ2FQbnhIWU9qenBSZXNmUDRJYmFJOWZsd08xOUtWUTBTYWtqQlJNRy1wUVUxTElySV82VDh2czhkMm9aWEhhWUVsNmw0MWhwNjBWdzIzSDNNYjlvX3lHUVF2dW5sMlRfYVJKQVZ1U2JITUVBMWxDaEpHNVBXcjFfVzN3b1ppTVh0aWlyRVQ2UzBLaG1IOFY1WktnZ3lTTVJieVE?oc=5"
+                        },
+                        {
+                            "category": "war",
+                            "title": "'Not technically a war': US Air Force widow initially denied benefits - The Jerusalem Post",
+                            "published": "2026-09-07T15:58:37+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9pQzVtQ3FGQzdSQ3hqcGNYajR2X3ZjNDRGZFR6cmRTMmVDekt0MkdhaHdzUzVDUHRwM2lvQ1VZSDF6cm9NcXprQURkN1M1dUkzNXh5ai1kZGppUzVxb0s4?oc=5"
+                        },
+                        {
+                            "category": "sanctions",
+                            "title": "UK foreign secretary making statement on sanctions for Israeli settlements in occupied West Bank - BBC",
+                            "published": "2026-09-08T12:21:51+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1MREpBbXRQZERxSUxRR0tTblpjbzVwSUEtNk83eFdJa3hCc2pKWFpZRTU1UmI0SU10a2JsVlZib3kyTGx5eDZpMjdlXzl3MW1oUHQ3eXN3?oc=5"
+                        },
+                        {
+                            "category": "sanctions",
+                            "title": "UK publishes legislation for tougher sanctions on Iran over nuclear programme - Reuters",
+                            "published": "2026-09-08T11:57:23+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbHhqMGdpaWtLcy1Pb3ExcFhZSmd4MUtieGtkb0tiLUtpeWhGZVNwRVJOR2FSTnBCLWFVSDdRSUpaS083WHNWZUk2ZDQ4SU1sSG9UNDFIYW9wSk5RUW1PRlhud3plZFdUdjBPeVRPRDVGWm5RYzh1d05lRnltVmNneXBNbkpUaFZwRzJaX0dvYWxSY1V1bkFibzcyRFkzWDBPV1U1ZDZ2blB1NkZObUZJ?oc=5"
+                        },
+                        {
+                            "category": "sanctions",
+                            "title": "U.S. issues sanctions on Turkish bank that it calls a 'critical financial lifeline' for Iran - PBS",
+                            "published": "2026-09-04T17:26:55+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNcExWLWlmbDBtR0UydXE1M1JqS2RLaXRvejBPOEo4ZE40bnp3eTlvR3oxMGxrQXFOWlc4ZHJ4VDBtLURxOWRhTF9rWFBKMjd0eExKWEpxbWw0TzJtQmVnRG1zWEVwWlFrT2Vva21WNlN3OExPY0lSVURFa3ZNeHUxMDAwd0dibm5WaXJ0VDJlNUE3bmpoVjE1ODI5cnNkMnZpN2VQaFZsSDBXeTVGRTJrTUlOQ0NuZ0gwc0pwTy1IaEhWUdIBxwFBVV95cUxPdmFIeWJpWTRDWDBvRlUtdkFIWk1MamlPb01qOFktbnNIdkFvUGZNTjVnRVFVVTh1aFY0cFBxRGVPbHhjcVdOVGhld2R3enFHWmZya1JjNlNrMEE4MXZaWVNFVVZ6amxTcEdKSk90aVVUTEtPYWltNnVIR3lLMG92X2tNYUlpLXB6UmFkc0I4NmFzVzFJVzgtR3huUjZFYjhhdUNzQ2JXNUY2dUhNeUVLVVFUdVdKTmt3N2VZVTZndjRaRVN5Q1l3?oc=5"
+                        },
+                        {
+                            "category": "sanctions",
+                            "title": "Burnham risks friction with Trump over Israeli West Bank settlement sanctions - South China Morning Post",
+                            "published": "2026-09-07T22:42:58+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOdW9pbnFISXV1dlhaR0Z3bkR6VEhUNTZfUmU0TzNDMDFuMUx2Si1RYnk2dzJ1Ykg2UGhKeVJVVEJ5Mm5tSDlQVndpdU8yTURvWWJXVV8xeGJUODctZG1LOERvRkpoS2NNdHV5WDF1NU1ibVNQaFVLZHd1Z2xUbDJMYkxGOGVNWnpzWmg1OHdnUzdCek5KYjdpS3VHU01MbFF2cTJlZHd0TzZuVENDZDhj0gGvAUFVX3lxTE03WmFoNHQ0a19WdXM5WW5ZbEo1eGp6VXRpOVpTV3hxOWlLWVRqU1dFM2lYSGJpSFJtNkJZWTNXU25GWTloeEtnTkNYS1VTSXpJbTYwcHZxMXB5a1dDQ3V5elBZU2VRdmh6WmtZSzJUX2JuRnhDekFhUHF4MHQtUGdYUWhiNXkwV1VVclFSMW1fZFpYQVFuVzE5WUJUZFE2WWdMcUxySWNWSWZKTXRBeHc?oc=5"
+                        },
+                        {
+                            "category": "sanctions",
+                            "title": "UK unveils tougher sanctions on Iran, expanding ship targeting powers and trade restrictions - The Jerusalem Post",
+                            "published": "2026-09-08T11:56:01+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5qOVhuYkFjOEY3RXRRc0paWTA2bWNBWkx2VG5vM0VYRUpfWUhZYzBHVC1fblZodEk5bS1yWFZrX2NQTDJkcjAzbVc1OUZ0WGVSX0U5SDZaVXpmUWFWWGY2dmxwNXlXeExMMXc?oc=5"
+                        },
+                        {
+                            "category": "sanctions",
+                            "title": "Wider Europe Briefing: New Russia Sanctions And The Slovak Veto - Radio Free Europe/Radio Liberty",
+                            "published": "2026-09-08T09:57:05+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNUzA1VlR5VjBzejlpRmRCVmNQZzRYSW5iVkwzUHhVM3hpOG4yS2VjcS16c1hENkJiU0tGOUNwYVFnaTdDSTQ2VUo0YXZCR3dHd0NEd0VwNXR6SkVfbVJtQ2x0NVhlcDVKWFpEazR3dWZqaU1pODZVX0tiZmprRUhJVFRTS3E4REdvRXZBYnAtMXHSAZMBQVVfeXFMUGh4WkRrbkdIUURUMVNyc3I5aS15TUJiZDktU0FObktxRWh3M2R2c1Z4b0U5b2JLYUNabXV1QXF2Sk1pU2ZtSHJua2MyRW1IVnl2RER0UU1SLWlZeTJzQjNIWUFmTGhTU2ZFSDBESVpnSktXNWF6cWxBNzhYUUE4bUtuNGdFTE9xRXJTLURwXzdPSjdz?oc=5"
+                        },
+                        {
+                            "category": "sanctions",
+                            "title": "Herzog: UK West Bank Sanctions Would Be ‘Grave Miscalculation’ - The Media Line",
+                            "published": "2026-09-08T10:11:32+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSHUxanJ0X0FrMmNaUmYxTlg0ZDFjQUUzM2lYSkRvcm1RZlZ4OWVkUFItMmI1REhBQlFCZS1MaGs3OGRxVkF6YTRVenRoYWcwUF9vMG9RZmRnRld2OV94MEE1UGNScllwb1RiY3U4SS1nYXVQUVNtMnlWMzdLNUN6VVRDelVZTUxVMDZNMFJVTFFkcUJSNVIwZk9wYw?oc=5"
+                        },
+                        {
+                            "category": "sanctions",
+                            "title": "Iran's Hormuz leverage in question as US sanctions begin to bite - Daily Sabah",
+                            "published": "2026-09-08T06:54:56+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQ055MktIUWFPcjBObmtSMmtzNmFhX1JHcXoxUVk2eUZKR2YzOFptOEJWbUk3UnBBN0s4bnJvTjV2OWlZYjhYcXU3bUV0Ml80eDM1NldCc01kanBPa1Bob04tMlhRd3hsbEMtSFNPOUtwY1JxbHhJcmFIdGY2TVZBNWRZZF96cnIzeHVfakNCeHR3azJNbG5RdWJxV2xsZjZxLTlJY3haZmJEc00?oc=5"
+                        },
+                        {
+                            "category": "sanctions",
+                            "title": "UK To Announce New Sanctions On Israel Tomorrow - Report - i24NEWS",
+                            "published": "2026-09-07T19:30:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV3pqVXBwZEZMRVNlTml0S19ZSzdoQnFxVm9GZFkwdkZhOEhlZ3VxX04ySFkwdmd0RVZPd2dMQkw3MTZkc0Zfa2VYRk55N3lMc3NjMDQ5VWVzNmdYY084QnFINUI0RDhMY3ZLUWhTTWpoRHp5d1BiMmNlUDVUSjhPaGl5Vk9nZWk4UHVkSFdtejdFQ01LcHZLUzg0ekM3bXo2cmUxbDJKenlvZTQ?oc=5"
+                        },
+                        {
+                            "category": "sanctions",
+                            "title": "Britain Set to Target Israeli West Bank Settlements With Trade Ban - nytimes.com",
+                            "published": "2026-09-08T08:32:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxORHpmdXJfMzJicGpuSXlfWmpERlIxYUoxR2NfWmg0cWw4c2hLNjhGejljZ3lfOUxtVG1iTnBKUXItVkpMQ0QwT0dsR1FJZ3Fjb0NQa25jWTdXb1dZM1VfRkJ0SXVuYVNablZCYWNkR05hb18tdG5IeTNzb2xhRG1Jd3g2SjFLUXFUblY3c2t6eUJKWklPVFE?oc=5"
+                        },
+                        {
+                            "category": "energy",
+                            "title": "Playing the oil endgame: Oil producers and the geopolitics of declining demand - E3G",
+                            "published": "2026-09-08T00:04:19+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1rLTl5RFJmM1lvMlY5aWVvNnZfWTRiUkRUOGZURElKcE5GQmIweDNSSU5mYWdLX21VS0Rpa0N2RXBjdVdMTUpCaWIzSHQ2c3VMYURMRjlISDFZaGN0TW1oaElubUFwX0c2V1VJOU92SWhnZjFvUDVmcUdJNk1Kajg?oc=5"
+                        },
+                        {
+                            "category": "energy",
+                            "title": "Magnolia Oil & Gas (MGY) As Geopolitical Risk Fades The Undervalued Narrative Holds - finance.yahoo.com",
+                            "published": "2026-09-04T20:12:52+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQ3dvUGQ0UXJWUmFLSXNMVWVWTGQzVGN6QTF1X20yWFUwRlgzQ0J6d1MxTnh4N2ZSSm80SXhPRTk5bk1DeTVIWllxS3BvNlVDZFI2TEh6QWR3cjNhbTg3ZUpiWmxycWtTaWxIcGlDOG1mVS1ZM3hhbndlWlNscGUwYWp5SnI5X2Nsei1xVFhTMldQWGxJ?oc=5"
+                        },
+                        {
+                            "category": "energy",
+                            "title": "Stocks dented by inflation risk from rising oil, dicey geopolitics - TradingView",
+                            "published": "2026-09-07T14:45:51+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNZjV2OU15LVdONnZIZHItaGRHMHcyMnpkZU5mTUZGN2hZMExGUzN1LXRPbjJUNzRfRkZsNXk3M2t0emZRODNqQ1hzVlpKcXhYN2xQNTE5ZktaNEc3LUJoZkRxa3Y0YTJtRFFvNk1DOEQ5cF8zTGxwR25va29LZlhNUWJoUU53UmJ6eDNzR19BZEl4TTlHUFdheDZmbUI3LXNFTkVQUThBQ0o3N2dtQlNRT0x5YmFjSVZBcXd1QTI2ZWlLQnpzX2RpNnotcS1heUU2?oc=5"
+                        },
+                        {
+                            "category": "energy",
+                            "title": "The End of U.S. Strategic Petroleum Reserve - zeihan.com",
+                            "published": "2026-09-07T12:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9UcTYxbXJpVmF3RGxEYlJ5ak96SU50YzltR09pazBGOVZPa1g0anh6dU5fNWhMS2R6elVTd2ZCNjdLVEhqZWFRTkdsbnA0c1lEY3RKNVEwdDN3WUZDdjV6aDJXbWEwc1YyNGxreVlXQQ?oc=5"
+                        },
+                        {
+                            "category": "energy",
+                            "title": "Monroe Doctrine 2.0: four threats to Trump's Venezuela oil deal - Escudo Digital",
+                            "published": "2026-09-08T05:15:01+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQOTc1Zk5Id3ZCLUt4X1hRUnNPNHVrRVlyTURXUWpkbnc3TGdsMHgzT1liTDJLNXU3NVdwdVJHMU15cUxPdlZYemJkeThfRHBjaEllZVJVOGE1MmVRM200MG1mUFVYZVpual83SnV2VEpMSTBGQWVCc01xRHpjWVNaNEZLM1NqNlMxSUJhaGpzU3FpYkRycWVldlRodU5lRFpVVHlRM1hLOVpvcWw1U3VFRFozTF9vZkF0?oc=5"
+                        },
+                        {
+                            "category": "energy",
+                            "title": "Emerging Markets Rally as AI Boosts Tech Stocks - briefs.co",
+                            "published": "2026-09-07T08:31:31+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQR1FmM0dSRERNa1JueU5LUWVDTmx0Q0RaczZBTkJ6M1Bscmd5Y3ZNQTFwb1c5Q2w3bG0wbURaYWJTcTRWdnpvdWdOeHpnLWpmQmlTSi10cXR2WHVUV1RDYm10TVlTeXhEaENoQ1h4Skl3alFDdlNxT0E4MURPSnJTcVJQcnpBWFpUcXZxS1IwTUpPZw?oc=5"
+                        },
+                        {
+                            "category": "energy",
+                            "title": "Column: Building SAF resilience in era of geopolitical tensions and energy shocks - gasworld",
+                            "published": "2026-09-07T10:04:08+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNNEdMb1hxTzBuR3Fzb25VQ3BWVDBxSFUzZVN3OGhMMWhNSEtDVVpwdDlFR0JiOE5MMFVNdXhNT1BrdXlWNkI4Y1JqX29mNEM2WVoyMFEzNzYtZ2g1OGRESnVMMjI4R2ExU3JhRGVnM3NMamZ3dWcxUDNYTFR5dm8xaW5kZ0YwRGdwQklDUjYwcHdveDY1QzlodkNKOHY3cDZwU1BLVEIzQ2RBM1hGcnl1aXI0c2hNUzAwZHNRc05NWENTOElLMGRr?oc=5"
+                        },
+                        {
+                            "category": "energy",
+                            "title": "Critical Minerals Replace Oil As Top Geopolitical Battleground: Canada, China Look To Squeeze US Supply Chains - Benzinga",
+                            "published": "2026-09-06T17:55:41+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWmx3am1qWVg0Y0ZYZkNGRUM1TUZUQVMweU9CMk9WN2c5Wmozemd6Qm9TSTFoaTFNY1NROEZteVBodFBZR0VzS1BiZjdEOUlnQ290Tk9CMTNiNUNFd1NvdE9JTWRPT1dPd3RldnktN1NfWWlfdldYV2JjV2FRemlWV0RsaGd1QWdYRzRRYTFldXZqZHFrRmNPR2JQbW1uZjQyNWE5ZXkwMjEwNDdpNmZiQW0wZ3JacU01bWo0?oc=5"
+                        },
+                        {
+                            "category": "diplomacy",
+                            "title": "Months after ceasefire, Israel and Hezbollah battle over a strategic hill in Lebanon - PBS",
+                            "published": "2026-09-05T18:18:59+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQzJMbXVhWlZIVlRFOGx6WThwem1Va1owYk1iYWNCZHh5ZVk2LTNIcHBVbW5pb1RxR3RkSWNHRVZYZDQ4cUpFYkJBVTVrTUJDTE5ObER0SzE2bDljYUFEVnBFWk1lZjlURVhSUlA0cmlDcm80SlEwQ3NTS181cVFMQTYxZDJuNUdta3Rpd0ZqTGZqdUF5a0VHMXgwX0FDOUowOGt1YTlseGFoLWZDay1SRk1uTlZxMXNfQXfSAb8BQVVfeXFMTWhKVVdRblJ3S2dUNWF2RW4yTmtVVU1YMm9uclViQ0xsTDJuVERJODdHQlY5V2NVZzJkSEg2WHVDMzBiaE42ejlva0lucXNRSWlLWThfbXZNR1RJN0U2ZldGVklnaU9qTmtSMzh4VEdFNXo0aWN1OVl5RlVHNVF0Z2NETXdjVWF2Ym9mRDJoeGg5ckNLY1VDZkx2bnBNMTJpRzRKQjhuWTdPYWM4UWZ3dUJiSXJqbkhUV2hFWG94R2M?oc=5"
+                        },
+                        {
+                            "category": "diplomacy",
+                            "title": "Burnham, Trump Back Continued Push for Ukraine-Russia Ceasefire - Kyiv Post",
+                            "published": "2026-09-07T22:54:52+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE41Y0MtRmM3dVVZTkJSSkVjVnF1MjJxWmhtSVFURUFaRG12dkFibHhFNGI2blZBVURHMlZwSWYzZHBNUjRULUhwTzQ4SQ?oc=5"
+                        },
+                        {
+                            "category": "diplomacy",
+                            "title": "U.S. envoys ‘very encouraged’ after peace talks in Moscow and Kyiv - NBC News",
+                            "published": "2026-09-06T15:14:18+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUF9BT1NzbENzSURjVk0tcURDWnlITXBBT0JCT2V2eFRuTnE2djBkZkhzS1JoQU1IdmFVZlBIYlg0WVV4QzJMUEluUDZMTlAwOHBfZVBzR0tMQ2hHZFJ3YW5oSjEzZG1CWEpXbjBlNXFmMFl6WWxRNzZQa3dtdUdIRldKN2F3ZThfYWpwNUFoQ0tvamVKYU1BMzJGUzY1amdsZUdQelQ3bjUyVjFRWmc?oc=5"
+                        },
+                        {
+                            "category": "diplomacy",
+                            "title": "US envoys hold ‘substantive’ talks with Zelenskyy in first visit to Kyiv - Al Jazeera",
+                            "published": "2026-09-06T21:19:10+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNaDN1dHFPNm14b3paaGYtVm14ZWVNUTdHLThxSjE5ZHlfbnI1blhIQV9jUm5vbXBaWDRlSWZqYWNlQk1xakQ2VnZFSkg5dl8zeUx4cEhHRm04eDR2clpTNmpMUVFoQUpqUXdqVkhrMFFvVmM0R3FfWHVxZTFmX1YtNXpndXBwUjQxZnhCNi1seFg2WjZnYnRWcnZveU5YUGJLcWVCR01mSktYTXZkVEVF0gG0AUFVX3lxTFB0a0FnRjZsQ2FkNEtneXYta1pXWi1jQ1VSN0hOejlsbFRJOWY0aC1IMFk4ZTlDVG9ScDItazNwQzg3UldkZkpOSUFIWm0yTlVUakZmQm1mQl9sZF9RQ1hDNWRQeUgxQjJyUFVkWnpySEpJRWYtb2thVzhBRzdfQWVjbGptVEF3Y0dpajhFV2d4ZGxBSTIzU0NKZWNXTHgzR1hlTnlPRW5hM2Y5aUNNcnpqR1JzWA?oc=5"
+                        },
+                        {
+                            "category": "diplomacy",
+                            "title": "Iran's president says Iran would return to ceasefire agreement if U.S. does - Spectrum News",
+                            "published": "2026-09-01T12:40:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcEhpTmt3U3JKUFQyVTdmanBUMkdIa3IxV0hiMUJmOUVtcDNEZU9VRzZtNm8tdnlUMW9QVnhUdHIxWTFGN0NlcHA1dWp4d2t4RXZRMXpmUHZMemx0enoxWkFMeWhJSnFaelBGaWdOS3NNSS15QjF2TFU1NHBBS1NTeDhrN2d6b0hOdGlsTDd2UnBYSjFDR1Npd2Q0eXNYQWtYUE9GQmRUQnFkTW5C?oc=5"
+                        },
+                        {
+                            "category": "diplomacy",
+                            "title": "Ukraine says ready to observe ceasefire during negotiations - China Daily",
+                            "published": "2026-09-05T23:00:08+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE85dkktTkUxSm54SUVONUdaeV9CMW9CaFNzQlpad1pPM1lHQzk2d0NtOURVeFJBT0tDenJHY3BCclJtdUhjb1RNMmhuVU13WkVJNHo2Qk10Zlh3SnJyNm1VSVVRTk8wQ1RPRGIwdFlhWXYtMllYNjhwdWN0RXIzdw?oc=5"
+                        },
+                        {
+                            "category": "diplomacy",
+                            "title": "EXCLUSIVE: Nigerian government and Boko Haram strike secret ceasefire deal - The New Humanitarian",
+                            "published": "2026-09-07T11:27:28+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQVTFuTHlRWDhWbUZmbnFKNl9QQnhyLWl0Q09fbFRtZDVYMTlUT1BBQm83WklIS2dkc0x4UlpaMUFfNS1NOGE0OHF5RlJVY2lwdFZEcTk0SzdzZ1QxUElHZ2xseDdzS2xSS1hGUFNQN283MV9sck9UcGZMUk8wNUxEODRzb09HajQ4RVRsUmhmb2s2RkFhTmNqVm5BNGlWejRXQXFhbXVBTWEwSTEtT2pqWVRsdzF6X1hsSnVtWXBPYUpZZw?oc=5"
+                        },
+                        {
+                            "category": "diplomacy",
+                            "title": "Burnham issues statement on Ukraine after holding fresh Trump talks - The Independent",
+                            "published": "2026-09-07T22:30:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNSm1YZEZmNlpCOTZ4Q0llcWowWS11VGxVNW05blQtd1N4RF84R29SNWlMam9rOGE0QmNrZXNnMkdJSXBqcXJJazRoeTlLN1JlbmxVRXN1NDhZNFM2VVlCZ0NkbHNieVNxQWVYVHZOSVpVV2ZDWEhBZFl6SFgzUUx6R0FWcmFBdm90YnhSdzItWWRCLWlMTW41Y1BSMy01WVU?oc=5"
+                        },
+                        {
+                            "category": "diplomacy",
+                            "title": "Ukraine orders temporary ceasefire as US envoys set to visit Kyiv, Moscow for peace talks, Ukrainian media reports - The Kyiv Independent",
+                            "published": "2026-09-05T01:28:20+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNeWJYVWNvOEd3YzhnLXZTRHNqWGVDY2RZRXBwVVR4TGo5U0dLd1B5dUJMUkZwQVBDUG5jTFItN0kwY1NkU2tEaXJNNE9wNHFINWlsTXkxTFFVRjN2ZW9YQ19wZXZsTGRHSHk0cjRRRnEwb2lsNl9rd1c3MjNseWZkTHBySlJIdWd4dzU0bzdjeFBSQjRhWHRqNnBCLURoSThzdmpKTVpsNjZ6ZUN4ZkRCLU5qUE1XRXp6?oc=5"
+                        },
+                        {
+                            "category": "diplomacy",
+                            "title": "Iran threatens new offensive while US rules out extending ceasefire deal - Reuters",
+                            "published": "2026-08-17T07:00:00+00:00",
+                            "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOcVl4WFplN0o4aVNSQ0REMXZlRmNzNTk4dURRMV8wUXhVQjNzVkZ0S3R4el9XSnE1MWZfLXc1RlZtZmJITURZRS1NaThGcXBKV0NZY2JXRGU1c093dzM1M0ZLcUtaRERHS1B4QUtXU3pwUk5XVWpSTEtXXzlTQ1BBZU85ZE50NHZQN2hXa1FTODlNRHU5UzhWS0tzMGktMktwMXI3X3pNYmRFMVIzSTlJbzl5SWRQa05qZ0lXWnM1bw?oc=5"
+                        }
+                    ]
+                }
+            },
+            {
+                "agent": "risk",
+                "signal": "neutral",
+                "score": 0.4,
+                "confidence": 0.8,
+                "summary": "Portfolio risk assessment based on cross-asset volatility, correlation and drawdown.",
+                "risks": [],
+                "evidence": {
+                    "avg_volatility": 0.3298,
+                    "avg_correlation": 0.4469,
+                    "max_drawdown": -0.1096,
+                    "volatility": {
+                        "BTC-USD": 0.3852,
+                        "ETH-USD": 0.5675,
+                        "QQQ": 0.2403,
+                        "SPY": 0.1264
+                    },
+                    "max_drawdowns": {
+                        "BTC-USD": NaN,
+                        "ETH-USD": NaN,
+                        "QQQ": -0.1096,
+                        "SPY": -0.0338
+                    },
+                    "correlation": {
+                        "BTC-USD": {
+                            "BTC-USD": 1.0,
+                            "ETH-USD": 0.89,
+                            "QQQ": 0.23,
+                            "SPY": 0.28
+                        },
+                        "ETH-USD": {
+                            "BTC-USD": 0.89,
+                            "ETH-USD": 1.0,
+                            "QQQ": 0.14,
+                            "SPY": 0.24
+                        },
+                        "QQQ": {
+                            "BTC-USD": 0.23,
+                            "ETH-USD": 0.14,
+                            "QQQ": 1.0,
+                            "SPY": 0.91
+                        },
+                        "SPY": {
+                            "BTC-USD": 0.28,
+                            "ETH-USD": 0.24,
+                            "QQQ": 0.91,
+                            "SPY": 1.0
+                        }
+                    }
+                }
+            }
+        ],
+        "market_score": 0.51,
+        "decision": "HOLD",
+        "market_regime": "MIXED",
+        "market_interpretation": "The multi-agent system indicates a balanced market environment. Bullish and bearish forces remain insufficient for a strong directional decision.",
+        "bullish_agents": [],
+        "neutral_agents": [
+            "macro",
+            "stock",
+            "crypto",
+            "onchain",
+            "derivatives",
+            "technical",
+            "news",
+            "geopolitical",
+            "risk"
+        ],
+        "bearish_agents": [],
+        "bullish_pct": 0.0,
+        "neutral_pct": 100.0,
+        "bearish_pct": 0.0,
+        "consensus_strength": 100.0,
+        "average_confidence": 0.82,
+        "signal_conflict": false,
+        "risk_override": false,
+        "strongest_bullish_agent": {
+            "agent": "crypto",
+            "score": 0.62,
+            "signal": "neutral"
+        },
+        "strongest_bearish_agent": {
+            "agent": "geopolitical",
+            "score": 0.4,
+            "signal": "neutral"
+        },
+        "top_positive_signals": [
+            "CRYPTO: Crypto market assessment based on 1-day and 7-day momentum, volume confirmation, BTC/ETH relative strength and broad market participation.",
+            "DERIVATIVES: Crypto derivatives assessment based on BTC and ETH funding, funding trends, open interest changes and positioning risk.",
+            "NEWS: Financial news sentiment assessment based on weighted bullish and bearish headlines, headline concentration, uncertainty and high-severity news events.",
+            "TECHNICAL: Technical market assessment based on RSI, EMA structure, MACD, MACD histogram and short-term price momentum."
+        ],
+        "top_risks": [
+            "MACRO: NASDAQ strength is developing alongside rising yields",
+            "ONCHAIN: Short-term BTC hashrate weakness",
+            "ONCHAIN: BTC transaction activity declined sharply",
+            "STOCK: Small caps are significantly underperforming large caps",
+            "TECHNICAL: MACD is below its signal line"
+        ]
+    }
+}

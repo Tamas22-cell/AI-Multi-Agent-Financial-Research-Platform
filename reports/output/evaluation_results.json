@@ -1,0 +1,1011 @@
+{
+    "generated_at": "2026-09-08T14:37:39.705263",
+    "primary_benchmark": "SPY",
+    "benchmark_symbols": {
+        "SPY": "SPY",
+        "BTC-USD": "BTC-USD"
+    },
+    "agent_benchmarks": {
+        "macro": "SPY",
+        "stock": "SPY",
+        "crypto": "BTC-USD",
+        "onchain": "BTC-USD",
+        "derivatives": "BTC-USD",
+        "technical": "SPY",
+        "news": "SPY",
+        "geopolitical": "SPY",
+        "risk": "SPY"
+    },
+    "total_records": 1,
+    "summary": {
+        "1d": {
+            "correct": 0,
+            "incorrect": 0,
+            "pending": 1,
+            "total_evaluated": 0,
+            "accuracy_pct": null,
+            "average_market_return_pct": null,
+            "best_market_return_pct": null,
+            "worst_market_return_pct": null
+        },
+        "7d": {
+            "correct": 0,
+            "incorrect": 0,
+            "pending": 1,
+            "total_evaluated": 0,
+            "accuracy_pct": null,
+            "average_market_return_pct": null,
+            "best_market_return_pct": null,
+            "worst_market_return_pct": null
+        },
+        "30d": {
+            "correct": 0,
+            "incorrect": 0,
+            "pending": 1,
+            "total_evaluated": 0,
+            "accuracy_pct": null,
+            "average_market_return_pct": null,
+            "best_market_return_pct": null,
+            "worst_market_return_pct": null
+        }
+    },
+    "benchmark_summary": {
+        "SPY": {
+            "1d": {
+                "evaluated": 0,
+                "pending": 1,
+                "bullish_moves": 0,
+                "neutral_moves": 0,
+                "bearish_moves": 0,
+                "average_return_pct": null,
+                "threshold_pct": 0.5
+            },
+            "7d": {
+                "evaluated": 0,
+                "pending": 1,
+                "bullish_moves": 0,
+                "neutral_moves": 0,
+                "bearish_moves": 0,
+                "average_return_pct": null,
+                "threshold_pct": 1.5
+            },
+            "30d": {
+                "evaluated": 0,
+                "pending": 1,
+                "bullish_moves": 0,
+                "neutral_moves": 0,
+                "bearish_moves": 0,
+                "average_return_pct": null,
+                "threshold_pct": 3.0
+            }
+        },
+        "BTC-USD": {
+            "1d": {
+                "evaluated": 0,
+                "pending": 1,
+                "bullish_moves": 0,
+                "neutral_moves": 0,
+                "bearish_moves": 0,
+                "average_return_pct": null,
+                "threshold_pct": 1.0
+            },
+            "7d": {
+                "evaluated": 0,
+                "pending": 1,
+                "bullish_moves": 0,
+                "neutral_moves": 0,
+                "bearish_moves": 0,
+                "average_return_pct": null,
+                "threshold_pct": 3.0
+            },
+            "30d": {
+                "evaluated": 0,
+                "pending": 1,
+                "bullish_moves": 0,
+                "neutral_moves": 0,
+                "bearish_moves": 0,
+                "average_return_pct": null,
+                "threshold_pct": 7.0
+            }
+        }
+    },
+    "decision_stats": {
+        "BUY": {
+            "1d": {
+                "total_signals": 0,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 0,
+                "accuracy_pct": null,
+                "average_return_pct": null
+            },
+            "7d": {
+                "total_signals": 0,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 0,
+                "accuracy_pct": null,
+                "average_return_pct": null
+            },
+            "30d": {
+                "total_signals": 0,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 0,
+                "accuracy_pct": null,
+                "average_return_pct": null
+            }
+        },
+        "HOLD": {
+            "1d": {
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_return_pct": null
+            },
+            "7d": {
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_return_pct": null
+            },
+            "30d": {
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_return_pct": null
+            }
+        },
+        "AVOID": {
+            "1d": {
+                "total_signals": 0,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 0,
+                "accuracy_pct": null,
+                "average_return_pct": null
+            },
+            "7d": {
+                "total_signals": 0,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 0,
+                "accuracy_pct": null,
+                "average_return_pct": null
+            },
+            "30d": {
+                "total_signals": 0,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 0,
+                "accuracy_pct": null,
+                "average_return_pct": null
+            }
+        }
+    },
+    "agent_stats": {
+        "macro": {
+            "1d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.47,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "7d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.47,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "30d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.47,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            }
+        },
+        "stock": {
+            "1d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.85,
+                "average_score": 0.49,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "7d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.85,
+                "average_score": 0.49,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "30d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.85,
+                "average_score": 0.49,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            }
+        },
+        "crypto": {
+            "1d": {
+                "benchmark": "BTC-USD",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.62,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "7d": {
+                "benchmark": "BTC-USD",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.62,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "30d": {
+                "benchmark": "BTC-USD",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.62,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            }
+        },
+        "onchain": {
+            "1d": {
+                "benchmark": "BTC-USD",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.47,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "7d": {
+                "benchmark": "BTC-USD",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.47,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "30d": {
+                "benchmark": "BTC-USD",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.47,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            }
+        },
+        "derivatives": {
+            "1d": {
+                "benchmark": "BTC-USD",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.61,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "7d": {
+                "benchmark": "BTC-USD",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.61,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "30d": {
+                "benchmark": "BTC-USD",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.61,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            }
+        },
+        "technical": {
+            "1d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.6,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "7d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.6,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "30d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.6,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            }
+        },
+        "news": {
+            "1d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.85,
+                "average_score": 0.61,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "7d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.85,
+                "average_score": 0.61,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "30d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.85,
+                "average_score": 0.61,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            }
+        },
+        "geopolitical": {
+            "1d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.85,
+                "average_score": 0.4,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "7d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.85,
+                "average_score": 0.4,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "30d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.85,
+                "average_score": 0.4,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            }
+        },
+        "risk": {
+            "1d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.4,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "7d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.4,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            },
+            "30d": {
+                "benchmark": "SPY",
+                "total_signals": 1,
+                "evaluated": 0,
+                "correct": 0,
+                "incorrect": 0,
+                "pending": 1,
+                "accuracy_pct": null,
+                "average_confidence": 0.8,
+                "average_score": 0.4,
+                "average_benchmark_return_pct": null,
+                "bullish_signals": 0,
+                "neutral_signals": 1,
+                "bearish_signals": 0
+            }
+        }
+    },
+    "agent_leaderboard": [
+        {
+            "rank": null,
+            "agent": "macro",
+            "benchmark": "SPY",
+            "status": "pending",
+            "reliable": false,
+            "samples": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "pending": 3,
+            "accuracy_pct": null,
+            "weighted_accuracy_pct": null,
+            "sample_factor": 0.0,
+            "leaderboard_score": null,
+            "horizon_accuracy": {
+                "1d": null,
+                "7d": null,
+                "30d": null
+            }
+        },
+        {
+            "rank": null,
+            "agent": "stock",
+            "benchmark": "SPY",
+            "status": "pending",
+            "reliable": false,
+            "samples": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "pending": 3,
+            "accuracy_pct": null,
+            "weighted_accuracy_pct": null,
+            "sample_factor": 0.0,
+            "leaderboard_score": null,
+            "horizon_accuracy": {
+                "1d": null,
+                "7d": null,
+                "30d": null
+            }
+        },
+        {
+            "rank": null,
+            "agent": "crypto",
+            "benchmark": "BTC-USD",
+            "status": "pending",
+            "reliable": false,
+            "samples": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "pending": 3,
+            "accuracy_pct": null,
+            "weighted_accuracy_pct": null,
+            "sample_factor": 0.0,
+            "leaderboard_score": null,
+            "horizon_accuracy": {
+                "1d": null,
+                "7d": null,
+                "30d": null
+            }
+        },
+        {
+            "rank": null,
+            "agent": "onchain",
+            "benchmark": "BTC-USD",
+            "status": "pending",
+            "reliable": false,
+            "samples": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "pending": 3,
+            "accuracy_pct": null,
+            "weighted_accuracy_pct": null,
+            "sample_factor": 0.0,
+            "leaderboard_score": null,
+            "horizon_accuracy": {
+                "1d": null,
+                "7d": null,
+                "30d": null
+            }
+        },
+        {
+            "rank": null,
+            "agent": "derivatives",
+            "benchmark": "BTC-USD",
+            "status": "pending",
+            "reliable": false,
+            "samples": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "pending": 3,
+            "accuracy_pct": null,
+            "weighted_accuracy_pct": null,
+            "sample_factor": 0.0,
+            "leaderboard_score": null,
+            "horizon_accuracy": {
+                "1d": null,
+                "7d": null,
+                "30d": null
+            }
+        },
+        {
+            "rank": null,
+            "agent": "technical",
+            "benchmark": "SPY",
+            "status": "pending",
+            "reliable": false,
+            "samples": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "pending": 3,
+            "accuracy_pct": null,
+            "weighted_accuracy_pct": null,
+            "sample_factor": 0.0,
+            "leaderboard_score": null,
+            "horizon_accuracy": {
+                "1d": null,
+                "7d": null,
+                "30d": null
+            }
+        },
+        {
+            "rank": null,
+            "agent": "news",
+            "benchmark": "SPY",
+            "status": "pending",
+            "reliable": false,
+            "samples": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "pending": 3,
+            "accuracy_pct": null,
+            "weighted_accuracy_pct": null,
+            "sample_factor": 0.0,
+            "leaderboard_score": null,
+            "horizon_accuracy": {
+                "1d": null,
+                "7d": null,
+                "30d": null
+            }
+        },
+        {
+            "rank": null,
+            "agent": "geopolitical",
+            "benchmark": "SPY",
+            "status": "pending",
+            "reliable": false,
+            "samples": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "pending": 3,
+            "accuracy_pct": null,
+            "weighted_accuracy_pct": null,
+            "sample_factor": 0.0,
+            "leaderboard_score": null,
+            "horizon_accuracy": {
+                "1d": null,
+                "7d": null,
+                "30d": null
+            }
+        },
+        {
+            "rank": null,
+            "agent": "risk",
+            "benchmark": "SPY",
+            "status": "pending",
+            "reliable": false,
+            "samples": 0,
+            "correct": 0,
+            "incorrect": 0,
+            "pending": 3,
+            "accuracy_pct": null,
+            "weighted_accuracy_pct": null,
+            "sample_factor": 0.0,
+            "leaderboard_score": null,
+            "horizon_accuracy": {
+                "1d": null,
+                "7d": null,
+                "30d": null
+            }
+        }
+    ],
+    "results": [
+        {
+            "timestamp": "2026-09-08T14:37:37.648627",
+            "signal_date": "2026-09-08",
+            "decision": "HOLD",
+            "market_regime": "MIXED",
+            "market_score": 0.51,
+            "average_confidence": 0.82,
+            "agents": {
+                "macro": {
+                    "signal": "neutral",
+                    "score": 0.47,
+                    "confidence": 0.8
+                },
+                "stock": {
+                    "signal": "neutral",
+                    "score": 0.49,
+                    "confidence": 0.85
+                },
+                "crypto": {
+                    "signal": "neutral",
+                    "score": 0.62,
+                    "confidence": 0.8
+                },
+                "onchain": {
+                    "signal": "neutral",
+                    "score": 0.47,
+                    "confidence": 0.8
+                },
+                "derivatives": {
+                    "signal": "neutral",
+                    "score": 0.61,
+                    "confidence": 0.8
+                },
+                "technical": {
+                    "signal": "neutral",
+                    "score": 0.6,
+                    "confidence": 0.8
+                },
+                "news": {
+                    "signal": "neutral",
+                    "score": 0.61,
+                    "confidence": 0.85
+                },
+                "geopolitical": {
+                    "signal": "neutral",
+                    "score": 0.4,
+                    "confidence": 0.85
+                },
+                "risk": {
+                    "signal": "neutral",
+                    "score": 0.4,
+                    "confidence": 0.8
+                }
+            },
+            "benchmarks": {
+                "SPY": {
+                    "1d": {
+                        "benchmark": "SPY",
+                        "target_days": 1,
+                        "target_date": "2026-09-09",
+                        "start_price": 770.24,
+                        "start_price_date": "2026-09-08",
+                        "start_price_timestamp": "2026-09-04 15:59:00-04:00",
+                        "start_price_source": "yfinance_1m",
+                        "start_price_method": "signal_snapshot",
+                        "future_date": null,
+                        "future_price": null,
+                        "return_pct": null,
+                        "market_move": "pending",
+                        "status": "pending"
+                    },
+                    "7d": {
+                        "benchmark": "SPY",
+                        "target_days": 7,
+                        "target_date": "2026-09-15",
+                        "start_price": 770.24,
+                        "start_price_date": "2026-09-08",
+                        "start_price_timestamp": "2026-09-04 15:59:00-04:00",
+                        "start_price_source": "yfinance_1m",
+                        "start_price_method": "signal_snapshot",
+                        "future_date": null,
+                        "future_price": null,
+                        "return_pct": null,
+                        "market_move": "pending",
+                        "status": "pending"
+                    },
+                    "30d": {
+                        "benchmark": "SPY",
+                        "target_days": 30,
+                        "target_date": "2026-10-08",
+                        "start_price": 770.24,
+                        "start_price_date": "2026-09-08",
+                        "start_price_timestamp": "2026-09-04 15:59:00-04:00",
+                        "start_price_source": "yfinance_1m",
+                        "start_price_method": "signal_snapshot",
+                        "future_date": null,
+                        "future_price": null,
+                        "return_pct": null,
+                        "market_move": "pending",
+                        "status": "pending"
+                    }
+                },
+                "BTC-USD": {
+                    "1d": {
+                        "benchmark": "BTC-USD",
+                        "target_days": 1,
+                        "target_date": "2026-09-09",
+                        "start_price": 78389.6562,
+                        "start_price_date": "2026-09-08",
+                        "start_price_timestamp": "2026-09-08 12:37:00+00:00",
+                        "start_price_source": "yfinance_1m",
+                        "start_price_method": "signal_snapshot",
+                        "future_date": null,
+                        "future_price": null,
+                        "return_pct": null,
+                        "market_move": "pending",
+                        "status": "pending"
+                    },
+                    "7d": {
+                        "benchmark": "BTC-USD",
+                        "target_days": 7,
+                        "target_date": "2026-09-15",
+                        "start_price": 78389.6562,
+                        "start_price_date": "2026-09-08",
+                        "start_price_timestamp": "2026-09-08 12:37:00+00:00",
+                        "start_price_source": "yfinance_1m",
+                        "start_price_method": "signal_snapshot",
+                        "future_date": null,
+                        "future_price": null,
+                        "return_pct": null,
+                        "market_move": "pending",
+                        "status": "pending"
+                    },
+                    "30d": {
+                        "benchmark": "BTC-USD",
+                        "target_days": 30,
+                        "target_date": "2026-10-08",
+                        "start_price": 78389.6562,
+                        "start_price_date": "2026-09-08",
+                        "start_price_timestamp": "2026-09-08 12:37:00+00:00",
+                        "start_price_source": "yfinance_1m",
+                        "start_price_method": "signal_snapshot",
+                        "future_date": null,
+                        "future_price": null,
+                        "return_pct": null,
+                        "market_move": "pending",
+                        "status": "pending"
+                    }
+                }
+            },
+            "horizons": {
+                "1d": {
+                    "benchmark": "SPY",
+                    "target_days": 1,
+                    "target_date": "2026-09-09",
+                    "start_price": 770.24,
+                    "start_price_date": "2026-09-08",
+                    "start_price_timestamp": "2026-09-04 15:59:00-04:00",
+                    "start_price_source": "yfinance_1m",
+                    "start_price_method": "signal_snapshot",
+                    "future_date": null,
+                    "future_price": null,
+                    "return_pct": null,
+                    "market_move": "pending",
+                    "status": "pending",
+                    "decision_outcome": "pending"
+                },
+                "7d": {
+                    "benchmark": "SPY",
+                    "target_days": 7,
+                    "target_date": "2026-09-15",
+                    "start_price": 770.24,
+                    "start_price_date": "2026-09-08",
+                    "start_price_timestamp": "2026-09-04 15:59:00-04:00",
+                    "start_price_source": "yfinance_1m",
+                    "start_price_method": "signal_snapshot",
+                    "future_date": null,
+                    "future_price": null,
+                    "return_pct": null,
+                    "market_move": "pending",
+                    "status": "pending",
+                    "decision_outcome": "pending"
+                },
+                "30d": {
+                    "benchmark": "SPY",
+                    "target_days": 30,
+                    "target_date": "2026-10-08",
+                    "start_price": 770.24,
+                    "start_price_date": "2026-09-08",
+                    "start_price_timestamp": "2026-09-04 15:59:00-04:00",
+                    "start_price_source": "yfinance_1m",
+                    "start_price_method": "signal_snapshot",
+                    "future_date": null,
+                    "future_price": null,
+                    "return_pct": null,
+                    "market_move": "pending",
+                    "status": "pending",
+                    "decision_outcome": "pending"
+                }
+            }
+        }
+    ]
+}
