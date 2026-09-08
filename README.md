@@ -1,4 +1,4 @@
-# AI Multi-Agent Financial Research Platform
+![Project Overview](a1bd1258-fce9-40d3-80ee-b45a38b0e324.png)# AI Multi-Agent Financial Research Platform
 
 > **A modular Python-based multi-agent financial intelligence system combining 9 specialized research agents, cross-market data, centralized orchestration, signal persistence, forward benchmark evaluation, and agent-level performance tracking.**
 
