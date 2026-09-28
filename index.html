@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Multi-Agent Financial Research</title>
+<style>
+:root{color-scheme:dark;--bg:#070b14;--card:#101827;--line:#243044;--muted:#8fa1b8;--good:#34d399;--bad:#fb7185;--accent:#60a5fa}*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at top,#14213a 0,#070b14 45%);color:#e8eef8}.wrap{max-width:1200px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:24px}.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.12em;font-size:12px}.title{font-size:clamp(26px,4vw,44px);margin:5px 0}.sub{color:var(--muted)}button{background:#2563eb;color:white;border:0;border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer}.status{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:13px}.dot{width:9px;height:9px;border-radius:50%;background:var(--good)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.card{grid-column:span 4;background:rgba(16,24,39,.88);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 12px 40px #0004}.wide{grid-column:span 8}.full{grid-column:1/-1}.label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.value{font-size:27px;font-weight:800;margin-top:8px}.pill{display:inline-block;padding:5px 9px;border-radius:999px;background:#172238;border:1px solid var(--line);margin:4px;font-size:12px}.agent{padding:12px 0;border-bottom:1px solid var(--line)}.agent:last-child{border:0}.agent b{display:inline-block;min-width:100px}.news{padding:10px 0;border-bottom:1px solid var(--line)}a{color:#93c5fd;text-decoration:none}.error{color:#fecaca;background:#451a1a;padding:14px;border-radius:10px}.loading{opacity:.65}.raw{white-space:pre-wrap;max-height:260px;overflow:auto;font:12px ui-monospace,monospace;color:#b8c6da}@media(max-width:800px){.card,.wide{grid-column:1/-1}.top{align-items:flex-start;flex-direction:column}}
+</style></head>
+<body><main class="wrap">
+<div class="top"><div><div class="eyebrow">QUANTUM AI LAB</div><h1 class="title">Multi-Agent Financial Research</h1><div class="sub">Macro · Technical · Sentiment · News intelligence</div></div><div><div class="status"><span class="dot"></span><span id="status">API online</span></div><button id="refresh">Run analysis</button></div></div>
+<div id="app" class="grid"><section class="card full loading">Loading agent research…</section></div>
+</main><script>
+const app=document.getElementById('app'),statusEl=document.getElementById('status'),btn=document.getElementById('refresh');
+const esc=v=>String(v??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const arr=v=>Array.isArray(v)?v:[];
+function signalClass(s){s=String(s||'').toLowerCase();return s.includes('bull')||s.includes('buy')?'good':s.includes('bear')||s.includes('sell')?'bad':''}
+function render(d){const agents=arr(d.agents);const news=arr(d.news||d.headlines||d.articles);const sig=d.signal||d.consensus||d.market_signal||d.final_signal||'Neutral';const conf=d.confidence??d.score??'—';const risks=arr(d.risks);app.innerHTML=`
+<section class="card"><div class="label">Consensus signal</div><div class="value" style="color:${signalClass(sig)==='good'?'var(--good)':signalClass(sig)==='bad'?'var(--bad)':'#e8eef8'}">${esc(sig)}</div></section>
+<section class="card"><div class="label">Confidence</div><div class="value">${esc(typeof conf==='number'?Math.round(conf*100)+'%':conf)}</div></section>
+<section class="card"><div class="label">Agents</div><div class="value">${agents.length||'—'}</div></section>
+<section class="card wide"><div class="label">Agent research</div>${agents.length?agents.map(a=>`<div class="agent"><b>${esc(a.agent||a.name||a.type||'Agent')}</b> <span class="pill">${esc(a.signal||a.stance||'neutral')}</span><div class="sub">${esc(a.summary||a.reason||a.analysis||'')}</div></div>`).join(''):'<p class="sub">Agent output is available in the detailed response below.</p>'}</section>
+<section class="card"><div class="label">Risk flags</div>${risks.length?risks.map(x=>`<span class="pill">${esc(typeof x==='object'?(x.name||x.risk||JSON.stringify(x)):x)}</span>`).join(''):'<p class="sub">No structured risk list returned.</p>'}</section>
+<section class="card full"><div class="label">Latest research / news</div>${news.length?news.slice(0,8).map(n=>`<div class="news">${n.url||n.link?`<a target="_blank" rel="noopener" href="${esc(n.url||n.link)}">${esc(n.title||n.headline||'Source')}</a>`:`${esc(n.title||n.headline||n)}`}<div class="sub">${esc(n.source||n.publisher||'')}</div></div>`).join(''):'<p class="sub">News is embedded in the analysis payload.</p>'}</section>
+<details class="card full"><summary>Raw research payload</summary><div class="raw">${esc(JSON.stringify(d,null,2))}</div></details>`}
+async function load(){btn.disabled=true;statusEl.textContent='Agents running…';app.innerHTML='<section class="card full loading">Running multi-agent analysis…</section>';try{const r=await fetch('/api/analyze',{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const d=await r.json();render(d);statusEl.textContent='Analysis complete'}catch(e){app.innerHTML=`<section class="card full error">API error: ${esc(e.message)}</section>`;statusEl.textContent='API error'}finally{btn.disabled=false}}
+btn.onclick=load;load();
+</script></body></html>
