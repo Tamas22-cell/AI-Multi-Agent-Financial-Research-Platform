@@ -1,2 +1,13 @@
+[project]
+name = "ai-multi-agent-financial-research-platform"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+  "yfinance",
+  "numpy",
+  "requests",
+  "feedparser",
+]
+
 [tool.vercel]
 entrypoint = "api.analyze:handler"
