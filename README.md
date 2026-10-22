@@ -2,12 +2,7 @@
 
 ![AI Multi-Agent Financial Research Platform](6a67ad51-9dff-441f-ac41-43154dc85e6e.png)
 
-> **Core platform · `main` branch** | [Explore autonomous quantum research v7.0.12](https://github.com/Tamas22-cell/AI-Multi-Agent-Financial-Research-Platform/tree/v7.0.12-autonomous-research)
->
 > Python 3.12+ · Multi-agent intelligence · Equities & crypto · Research-oriented, not investment advice
-
-**Visual overview:** A new project cover is being prepared. This README deliberately avoids claiming verified trading profitability or audited production readiness.
-
 
 > **A modular Python-based multi-agent financial intelligence system combining 9 specialized research agents, cross-market data, centralized orchestration, signal persistence, forward benchmark evaluation, and agent-level performance tracking.**
 
