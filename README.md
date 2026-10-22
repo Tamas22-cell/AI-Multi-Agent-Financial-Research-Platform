@@ -1,6 +1,6 @@
 # AI Multi-Agent Financial Research Platform
 
-![AI Multi-Agent Financial Research Platform](a1bd1258-fce9-40d3-80ee-b45a38b0e324.png)
+![AI Multi-Agent Financial Research Platform](6a67ad51-9dff-441f-ac41-43154dc85e6e.png)
 
 > **Core platform · `main` branch** | [Explore autonomous quantum research v7.0.12](https://github.com/Tamas22-cell/AI-Multi-Agent-Financial-Research-Platform/tree/v7.0.12-autonomous-research)
 >
