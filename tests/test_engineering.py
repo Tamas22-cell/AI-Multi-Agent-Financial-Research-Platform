@@ -1,6 +1,11 @@
 import json
 import tempfile
 import unittest
+import os
+import sys
+import types
+from contextlib import nullcontext
+from unittest.mock import patch
 from pathlib import Path
 
 from data.pipeline import export_validated_market_snapshot
@@ -30,6 +35,45 @@ class EngineeringTests(unittest.TestCase):
     def test_opentelemetry_span_interface(self):
         with traced_span("offline.test"):
             pass
+
+    def test_langfuse_requires_explicit_opt_in_and_credentials(self):
+        with patch.dict(os.environ, {"LANGFUSE_TRACING_ENABLED": "1"}, clear=True):
+            with traced_span("offline.no-credentials"):
+                pass
+
+    def test_langfuse_observation_without_sensitive_payload(self):
+        called = []
+        class FakeClient:
+            def start_as_current_observation(self, **kwargs):
+                called.append(kwargs)
+                return nullcontext()
+
+        fake = types.ModuleType("langfuse")
+        fake.get_client = lambda: FakeClient()
+        env = {
+            "LANGFUSE_TRACING_ENABLED": "1",
+            "LANGFUSE_PUBLIC_KEY": "test-public",
+            "LANGFUSE_SECRET_KEY": "test-secret",
+            "LANGFUSE_BASE_URL": "http://localhost:3000",
+        }
+        with patch.dict(os.environ, env, clear=True):
+            with patch.dict(sys.modules, {"langfuse": fake}):
+                with traced_span("financial.api.analyze"):
+                    pass
+        self.assertEqual(called, [{"name": "financial.api.analyze", "as_type": "span"}])
+        self.assertNotIn("test-secret", repr(called))
+
+    def test_langfuse_failure_falls_back_to_noop(self):
+        fake = types.ModuleType("langfuse")
+        fake.get_client = lambda: (_ for _ in ()).throw(RuntimeError("offline"))
+        with patch.dict(os.environ, {
+            "LANGFUSE_TRACING_ENABLED": "1",
+            "LANGFUSE_PUBLIC_KEY": "test-public",
+            "LANGFUSE_SECRET_KEY": "test-secret",
+            "LANGFUSE_BASE_URL": "http://localhost:3000",
+        }, clear=True), patch.dict(sys.modules, {"langfuse": fake}):
+            with traced_span("offline.failure"):
+                pass
 
     def test_mlflow_records_reproducible_metadata(self):
         import mlflow
