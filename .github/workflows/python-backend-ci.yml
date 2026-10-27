@@ -23,4 +23,5 @@ jobs:
       - name: Compile source
         run: python -m compileall -q api agents data reports main.py orchestrator.py evaluation.py signal_history.py
       - name: Run offline API and data quality tests
-        run: python -m unittest discover -s tests -v
+        run: python -m unittest discover -s tests -p 'test_api.py' -v
+          python -m unittest discover -s tests -p 'test_data_quality.py' -v
