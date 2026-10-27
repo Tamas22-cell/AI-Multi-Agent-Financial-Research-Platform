@@ -22,7 +22,27 @@ def configure_local_tracing():
 
 
 def traced_span(name):
-    """Never require an external tracing account for normal API operation."""
+    """Trace using Langfuse only with explicit opt-in and complete credentials.
+
+    Neither inputs, outputs nor credentials are attached to spans by default.
+    Existing local OpenTelemetry and no-op behavior remains the fallback.
+    """
+    if (
+        os.getenv("LANGFUSE_TRACING_ENABLED") == "1"
+        and os.getenv("LANGFUSE_PUBLIC_KEY")
+        and os.getenv("LANGFUSE_SECRET_KEY")
+        and os.getenv("LANGFUSE_BASE_URL")
+    ):
+        try:
+            from langfuse import get_client
+
+            return get_client().start_as_current_observation(
+                name=name, as_type="span"
+            )
+        except Exception:
+            # Monitoring must never interrupt a financial-analysis response.
+            pass
+
     try:
         configure_local_tracing()
         from opentelemetry import trace
