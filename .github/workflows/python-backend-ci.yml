@@ -1,0 +1,26 @@
+name: Python backend quality CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Compile source
+        run: python -m compileall -q api agents data reports main.py orchestrator.py evaluation.py signal_history.py
+      - name: Run offline API and data quality tests
+        run: python -m unittest discover -s tests -v
