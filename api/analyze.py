@@ -5,6 +5,7 @@ from http.server import BaseHTTPRequestHandler
 from urllib.parse import urlparse
 
 from orchestrator import Orchestrator
+from observability import traced_span
 
 
 def _sanitize_json(value):
@@ -42,7 +43,8 @@ class handler(BaseHTTPRequestHandler):
 
         if path in ("/api/analyze", "/api/analyze.py"):
             try:
-                output = _sanitize_json(Orchestrator().run())
+                with traced_span("financial.api.analyze"):
+                    output = _sanitize_json(Orchestrator().run())
                 body = json.dumps(output, default=str, allow_nan=False).encode("utf-8")
                 self.send_response(200)
                 self.send_header("Content-Type", "application/json; charset=utf-8")
